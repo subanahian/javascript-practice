@@ -119,3 +119,5 @@ if (price > 500) {
 } else {
   console.log("No discount applied. Final price is: " + price.toFixed(2));
 }
+
+//avd-2
