@@ -125,3 +125,25 @@ var totalAmount=;
 //avd-3
 //avd-4
 //avd-5
+var totalAmount="250"
+var paymentMethod="bKash"
+  if (totalAmount >= 550 && paymentMethod === 'bKash') {
+      console.log('You get 50 Taka cashback.');
+  } 
+  else if (totalAmount >= 1010 && paymentMethod === 'Visa Card') {
+      console.log('You get a 100 Taka discount.');
+  } 
+  else if (totalAmount>= 5500) {
+      if (paymentMethod === 'bKash' || paymentMethod === 'Nagad') {
+          console.log('You get 100 Taka cashback.');
+      } 
+      else if (paymentMethod === 'Visa Card') {
+          let discount = Math.min(totalAmount * 0.05, 500);
+          console.log(`You get a ${discount} Taka discount.`);
+      }
+  } 
+  else {
+      console.log('No offer available.');
+  }
+
+
