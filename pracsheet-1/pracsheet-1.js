@@ -109,16 +109,6 @@ if (day === "Saturday") {
 */
 
 //avd-1
-var price=1020;
-if (price > 500) {
-  if(var discountedPrice = price - (price * 0.2));
- { console.log("After 20% discount, the price is: " + discountedPrice.toFixed(2));
-} }else if (price >= 200 && price <= 500) {
-  let discountedPrice = price - (price * 0.1);
-  console.log("After 10% discount, the price is: " + discountedPrice.toFixed(2));
-} else {
-  console.log("No discount applied. Final price is: " + price.toFixed(2));
-}
 
 //avd-2
 var totalAmount=;
@@ -143,7 +133,7 @@ var paymentMethod="bKash"
       }
   } 
   else {
-      console.log('No offer available.');
+      console.log('No offer available');
   }
 
 
