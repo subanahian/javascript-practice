@@ -102,3 +102,14 @@ function isZero(num) {
   }
 }
 console.log(isZero(0));
+
+//prob-11(sum=100)
+function biggerThan100(num1, num2, num3) {
+  var sum = num1 + num2 + num3;
+  if (sum > 100) {
+    return `${sum} bigger than 100`;
+  } else {
+    return `${sum} Less than 100`;
+  }
+}
+console.log(biggerThan100(10, 20, 80));
