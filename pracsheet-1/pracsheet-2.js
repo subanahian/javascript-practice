@@ -113,3 +113,15 @@ function biggerThan100(num1, num2, num3) {
   }
 }
 console.log(biggerThan100(10, 20, 80));
+
+//prob-12
+function checkLeapYear(year) {
+  if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
+    return "Leap Year";
+  } else {
+    return "Not Leap Year";
+  }
+}
+console.log(checkLeapYear(2200));
+console.log(checkLeapYear(2000));
+console.log(checkLeapYear(2015));
