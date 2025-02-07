@@ -160,3 +160,46 @@ function checkSum(num1, num2) {
   }
 }
 console.log(checkSum(25, 25));
+
+//prob-16
+
+function checkTimeOfDay(hour) {
+  if (hour >= 6 && hour < 12) {
+    return "It's morning";
+  } else if (hour >= 12 && hour < 18) {
+    return "It's evening";
+  } else {
+    return "It's night";
+  }
+}
+console.log(checkTimeOfDay(9));
+
+//prob17
+
+unction checkPassword(pass) {
+  if (pass.length >= 8) {
+      return "Valid Password";
+  } else {
+      return "Password must be longer than 8 characters.";
+  }
+}
+console.log(checkPassword('123458789'));
+
+//prob-18
+function checkNumber (num) {
+  if (num > 0 && num % 2 === 0) {
+      return 'The number is positive and even';
+  }
+  else {
+      return 'Not positive and even';
+  }
+}
+console.log(checkNumber(42));
+
+//prob-19
+function checkweight (weight) {
+  if (weight >= 50) {
+      return '50kg or more than 50kg'
+  }
+}
+console.log(checkweight(50));  
