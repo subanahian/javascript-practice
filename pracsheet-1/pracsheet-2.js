@@ -123,5 +123,40 @@ function checkLeapYear(year) {
   }
 }
 console.log(checkLeapYear(2200));
-console.log(checkLeapYear(2000));
-console.log(checkLeapYear(2015));
+
+//prob-13
+function checkPass(Bangla, English, Math, Physics, Chemistry) {
+  if (
+    Bangla >= 33 &&
+    English >= 33 &&
+    Math >= 33 &&
+    Physics >= 33 &&
+    Chemistry >= 33
+  ) {
+    return "Pass";
+  } else {
+    return "Fail!";
+  }
+}
+console.log(checkPass(35, 23, 88, 98, 90));
+
+//prob-14
+function checkNumber(num) {
+  if (num >= 0 && num <= 9) {
+    return "Single-digit";
+  } else {
+    return "Not Single-digit";
+  }
+}
+console.log(checkNumber(5));
+
+//prob-15
+
+function checkSum(num1, num2) {
+  if (num1 + num2 === 50) {
+    return " The sum is 50";
+  } else {
+    return " The sum is not 50";
+  }
+}
+console.log(checkSum(25, 25));
