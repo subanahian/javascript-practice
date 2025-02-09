@@ -194,7 +194,7 @@ function checkNumber (num) {
       return 'Not positive and even';
   }
 }
-console.log(checkNumber(42));
+console.log(checkNumber(65));
 
 //prob-19
 function checkweight (weight) {
