@@ -183,7 +183,7 @@ unction checkPassword(pass) {
       return "Password must be longer than 8 characters.";
   }
 }
-console.log(checkPassword('123458789'));
+console.log(checkPassword('56789431'));
 
 //prob-18
 function checkNumber (num) {
