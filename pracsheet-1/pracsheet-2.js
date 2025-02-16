@@ -203,3 +203,13 @@ function checkweight (weight) {
   }
 }
 console.log(checkweight(50));  
+
+//prob-20
+
+function isDivisible(num1, num2) {
+  let larger = Math.max(num1, num2);
+  let smaller = Math.min(num1, num2);
+  
+  return larger % smaller === 0 ? "Divisible" : "Not Divisible";
+}
+console.log(isDivisible(10, 5)); 
