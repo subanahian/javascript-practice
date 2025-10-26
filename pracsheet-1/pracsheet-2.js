@@ -84,6 +84,7 @@ function checkGrade(mark) {
 console.log(checkGrade(95));
 
 //prob-9(small number)
+
 function minNumber(num1, num2) {
   if (num1 > num2) {
     return `The smallest number is: ${num2}`;
@@ -94,6 +95,7 @@ function minNumber(num1, num2) {
 console.log(minNumber(48, 16));
 
 //peob-10( check 0)
+
 function isZero(num) {
   if (num === 0) {
     return "Zero";
@@ -104,6 +106,7 @@ function isZero(num) {
 console.log(isZero(0));
 
 //prob-11(sum=100)
+
 function biggerThan100(num1, num2, num3) {
   var sum = num1 + num2 + num3;
   if (sum > 100) {
@@ -115,6 +118,7 @@ function biggerThan100(num1, num2, num3) {
 console.log(biggerThan100(10, 20, 80));
 
 //prob-12
+
 function checkLeapYear(year) {
   if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
     return "Leap Year";
@@ -125,6 +129,7 @@ function checkLeapYear(year) {
 console.log(checkLeapYear(2200));
 
 //prob-13
+
 function checkPass(Bangla, English, Math, Physics, Chemistry) {
   if (
     Bangla >= 33 &&
@@ -138,9 +143,10 @@ function checkPass(Bangla, English, Math, Physics, Chemistry) {
     return "Fail!";
   }
 }
-console.log(checkPass(35, 23, 88, 98, 90));
+console.log(checkPass(35, 23, 88, 54, 90));
 
 //prob-14
+
 function checkNumber(num) {
   if (num >= 0 && num <= 9) {
     return "Single-digit";
@@ -186,6 +192,7 @@ unction checkPassword(pass) {
 console.log(checkPassword('56789431'));
 
 //prob-18
+
 function checkNumber (num) {
   if (num > 0 && num % 2 === 0) {
       return 'The number is positive and even';
@@ -197,6 +204,7 @@ function checkNumber (num) {
 console.log(checkNumber(65));
 
 //prob-19
+
 function checkweight (weight) {
   if (weight >= 50) {
       return '50kg or more than 50kg'
