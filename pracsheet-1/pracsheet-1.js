@@ -1,4 +1,5 @@
 //prob-1
+
 /*var num = 5;
 if (num % 2 === 0) {
   console.log("Even");
@@ -8,6 +9,7 @@ if (num % 2 === 0) {
 */
 
 //prob-2
+
 /*var num1 = 6;
 var num2 = 4;
 var num3 = 8;
@@ -21,6 +23,7 @@ if (num1 > num2 && num1 > num3) {
 */
 
 //prob-3
+
 /*var mark = 95;
 if (mark >= 80) {
   console.log("Grade: A");
@@ -33,6 +36,7 @@ if (mark >= 80) {
 }*/
 
 //prob- 4
+
 /*var year = 2025;
 if (year % 400 == 0) {
   console.log("leap year");
@@ -46,6 +50,7 @@ if (year % 400 == 0) {
 */
 
 //prob-5
+
 /*var num = 15;
 if (num % 2 === 0) {
   if (num % 5 === 0) {
@@ -57,6 +62,7 @@ if (num % 2 === 0) {
 */
 
 //prob-6
+
 /*var mark = 99;
 if (mark >= 33) {
   console.log("Pass");
@@ -66,6 +72,7 @@ if (mark >= 33) {
 */
 
 //prob-7
+
 /*var month=
 if (month === "february") {
     console.log("28 or 29 days");
@@ -78,6 +85,7 @@ if (month === "february") {
 }
 */
 //prob-8
+
 /*var age = 15;
 if (age >= 18) {
   console.log("Eligible for driving license");
@@ -87,6 +95,7 @@ if (age >= 18) {
 */
 
 //prob-9
+
 /*var num = 2;
 if (num > 0) {
   console.log("Positive");
@@ -98,6 +107,7 @@ if (num > 0) {
 */
 
 //prob-10
+
 /*var day = "Monday";
 if (day === "Saturday") {
   console.log("Holiday");
@@ -114,6 +124,7 @@ if (day === "Saturday") {
 //avd-3
 //avd-4
 //avd-5
+
 var totalAmount = "250";
 var paymentMethod = "bKash";
 if (totalAmount >= 550 && paymentMethod === "bKash") {
