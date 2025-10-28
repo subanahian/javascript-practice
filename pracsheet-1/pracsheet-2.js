@@ -221,3 +221,12 @@ function isDivisible(num1, num2) {
   return larger % smaller === 0 ? "Divisible" : "Not Divisible";
 }
 console.log(isDivisible(10, 5)); 
+
+//prob-21
+
+let totalMoney = 500;
+let people = 7;
+
+let eachShare = totalMoney / people;
+
+console.log("Each person will get:", eachShare.toFixed(2), "Taka");
