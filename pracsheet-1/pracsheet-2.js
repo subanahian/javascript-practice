@@ -230,3 +230,6 @@ let people = 7;
 let eachShare = totalMoney / people;
 
 console.log("Each person will get:", eachShare.toFixed(2), "Taka");
+
+//PROB-22
+
