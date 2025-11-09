@@ -263,3 +263,8 @@ let text = "javascript";
 let vowels = text.match(/[aeiou]/gi).length;
 console.log(vowels);
 
+//prob-27
+
+function isLeap(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+}
