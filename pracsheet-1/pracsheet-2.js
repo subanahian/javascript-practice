@@ -257,3 +257,9 @@ function factorial(n) {
 }
 console.log(factorial(5));
 
+//prob-26
+
+let text = "javascript";
+let vowels = text.match(/[aeiou]/gi).length;
+console.log(vowels);
+
