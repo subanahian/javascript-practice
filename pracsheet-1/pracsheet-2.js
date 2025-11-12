@@ -292,3 +292,8 @@ function generatePassword(length) {
   return password;
 }
 console.log(generatePassword(8));
+
+//prob-30
+
+let ar = [0, false, "", null, undefined, 5, "Hi"];
+console.log(ar.filter(Boolean));
