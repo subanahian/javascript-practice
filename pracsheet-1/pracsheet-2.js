@@ -280,3 +280,15 @@ let timer = setInterval(() => {
     console.log("Time’s up!");
   }
 }, 1000);
+ 
+//prob-29
+
+function generatePassword(length) {
+  const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%";
+  let password = "";
+  for (let i = 0; i < length; i++) {
+    password += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return password;
+}
+console.log(generatePassword(8));
