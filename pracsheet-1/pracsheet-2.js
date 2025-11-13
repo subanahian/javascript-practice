@@ -297,3 +297,6 @@ console.log(generatePassword(8));
 
 let ar = [0, false, "", null, undefined, 5, "Hi"];
 console.log(ar.filter(Boolean));
+ 
+//prob-31
+
