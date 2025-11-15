@@ -300,3 +300,8 @@ console.log(ar.filter(Boolean));
  
 //prob-31
 
+let nums = [1, 2, 4, 5];
+let n = 5;
+let expectedSum = (n * (n + 1)) / 2;
+let actualSum = nums.reduce((a, b) => a + b, 0);
+console.log(expectedSum - actualSum);
