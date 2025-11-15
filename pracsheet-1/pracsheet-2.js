@@ -305,3 +305,10 @@ let n = 5;
 let expectedSum = (n * (n + 1)) / 2;
 let actualSum = nums.reduce((a, b) => a + b, 0);
 console.log(expectedSum - actualSum);
+
+//prob
+
+function isAnagram(a, b) {
+  return a.split("").sort().join("") === b.split("").sort().join("");
+}
+console.log(isAnagram("listen", "silent"));
