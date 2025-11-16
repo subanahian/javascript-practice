@@ -312,3 +312,13 @@ function isAnagram(a, b) {
   return a.split("").sort().join("") === b.split("").sort().join("");
 }
 console.log(isAnagram("listen", "silent"));
+
+//prob--33
+
+let students = [
+  { name: "A", marks: 70 },
+  { name: "B", marks: 85 },
+  { name: "C", marks: 60 }
+];
+let topper = students.reduce((a, b) => a.marks > b.marks ? a : b);
+console.log(topper.name);
