@@ -325,6 +325,7 @@ console.log(topper.name);
 
 //PROB-34
 
-fdsfibfkjdfhkib 
-kjdnsdfkdkjs;
+let person = { name: "Raj", age: 25, city: "Dhaka" };
+console.log(Object.keys(person).length);
+
 
