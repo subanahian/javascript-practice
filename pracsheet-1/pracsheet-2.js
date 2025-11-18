@@ -322,3 +322,9 @@ let students = [
 ];
 let topper = students.reduce((a, b) => a.marks > b.marks ? a : b);
 console.log(topper.name);
+
+//PROB-34
+
+fdsfibfkjdfhkib 
+kjdnsdfkdkjs;
+
