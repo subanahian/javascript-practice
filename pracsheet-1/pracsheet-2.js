@@ -328,4 +328,9 @@ console.log(topper.name);
 let person = { name: "Raj", age: 25, city: "Dhaka" };
 console.log(Object.keys(person).length);
 
+//prob-35
+
+let person = { name: "Raj", age: 25, city: "Dhaka" };
+console.log(Object.keys(person).length);
+
 
