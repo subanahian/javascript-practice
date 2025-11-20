@@ -333,4 +333,10 @@ console.log(Object.keys(person).length);
 let person = { name: "Raj", age: 25, city: "Dhaka" };
 console.log(Object.keys(person).length);
 
+//prob-36
+
+let a = 5, b = 10;
+[a, b] = [b, a];
+console.log(a, b);
+
 
