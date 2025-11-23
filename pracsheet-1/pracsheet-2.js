@@ -306,7 +306,7 @@ let expectedSum = (n * (n + 1)) / 2;
 let actualSum = nums.reduce((a, b) => a + b, 0);
 console.log(expectedSum - actualSum);
 
-//prob
+//prob-32
 
 function isAnagram(a, b) {
   return a.split("").sort().join("") === b.split("").sort().join("");
@@ -338,3 +338,6 @@ console.log(a, b);
 let score = 0;
 if (userAnswer === correctAnswer) score++;
  
+//prob-37
+
+let answer = Math.floor(Math.random()*10)+1;
