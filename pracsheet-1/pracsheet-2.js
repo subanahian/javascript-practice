@@ -341,3 +341,8 @@ if (userAnswer === correctAnswer) score++;
 //prob-37
 
 let answer = Math.floor(Math.random()*10)+1;
+
+//prob-38
+
+let time = 0;
+setInterval(() => console.log(time++), 1000);
