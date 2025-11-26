@@ -354,3 +354,9 @@ function MyPromise(fn) {
     fn(cb);
   };
 }
+
+//prob-40
+Array.prototype.myReduce = function(fn, acc) {
+  for (let i of this) acc = fn(acc, i);
+  return acc;
+};
