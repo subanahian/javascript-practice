@@ -346,3 +346,11 @@ let answer = Math.floor(Math.random()*10)+1;
 
 let time = 0;
 setInterval(() => console.log(time++), 1000);
+
+//prob-39
+
+function MyPromise(fn) {
+  this.then = function(cb) {
+    fn(cb);
+  };
+}
