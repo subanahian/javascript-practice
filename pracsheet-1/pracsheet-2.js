@@ -360,3 +360,8 @@ Array.prototype.myReduce = function(fn, acc) {
   for (let i of this) acc = fn(acc, i);
   return acc;
 };
+
+//prob-41
+function total(price, qty, tax) {
+  return (price * qty) + tax;
+}
