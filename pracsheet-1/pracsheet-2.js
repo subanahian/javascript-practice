@@ -365,3 +365,9 @@ Array.prototype.myReduce = function(fn, acc) {
 function total(price, qty, tax) {
   return (price * qty) + tax;
 }
+
+//prob-42
+function dateDiff(d1, d2) {
+  let diff = Math.abs(new Date(d2) - new Date(d1));
+  return diff / (1000 * 60 * 60 * 24);
+}
