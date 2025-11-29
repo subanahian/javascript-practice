@@ -371,3 +371,8 @@ function dateDiff(d1, d2) {
   let diff = Math.abs(new Date(d2) - new Date(d1));
   return diff / (1000 * 60 * 60 * 24);
 }
+
+//prob-43
+input.oninput = () => {
+  input.style.color = input.value.length > 10 ? "red" : "black";
+};
