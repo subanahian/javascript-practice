@@ -376,3 +376,5 @@ function dateDiff(d1, d2) {
 input.oninput = () => {
   input.style.color = input.value.length > 10 ? "red" : "black";
 };
+
+//prob-44
