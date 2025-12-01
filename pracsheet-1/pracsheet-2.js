@@ -378,3 +378,7 @@ input.oninput = () => {
 };
 
 //prob-44
+let str = "hello world";
+let result = str.split(" ").join("");
+console.log(result);
+
