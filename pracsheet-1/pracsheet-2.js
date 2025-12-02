@@ -382,3 +382,9 @@ let str = "hello world";
 let result = str.split(" ").join("");
 console.log(result);
 
+//prob-45
+let n = 5, fact = 1;
+for (let i = 1; i <= n; i++) fact *= i;
+console.log(fact);
+
+
