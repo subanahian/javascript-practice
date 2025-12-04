@@ -402,3 +402,13 @@ type();
 loader.style.display = "block";
 setTimeout(() => loader.style.display = "none", 2000);
 
+//prob-48
+
+async function tryFetch(url){
+  for(let i=0;i<3;i++){
+    try {
+      let res = await fetch(url);
+      return await res.json();
+    } catch(e){}
+  }
+}
