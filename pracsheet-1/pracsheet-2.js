@@ -397,3 +397,8 @@ function type(){
 }
 type();
 
+//prob-47
+
+loader.style.display = "block";
+setTimeout(() => loader.style.display = "none", 2000);
+
