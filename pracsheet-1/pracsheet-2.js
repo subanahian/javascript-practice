@@ -412,3 +412,8 @@ async function tryFetch(url){
     } catch(e){}
   }
 }
+
+//prob-49
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then(res => res.json())
+  .then(data => console.log(data));
