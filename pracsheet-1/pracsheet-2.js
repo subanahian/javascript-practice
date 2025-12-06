@@ -417,3 +417,10 @@ async function tryFetch(url){
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then(res => res.json())
   .then(data => console.log(data));
+
+  //prob-50
+  let index = 0;
+function next(){
+  index = (index + 1) % images.length;
+  showImage(index);
+}
