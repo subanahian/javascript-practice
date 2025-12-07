@@ -424,3 +424,6 @@ function next(){
   index = (index + 1) % images.length;
   showImage(index);
 }
+//prob-51
+let original = {a:1, b:{c:2}};
+let clone = JSON.parse(JSON.stringify(original));
