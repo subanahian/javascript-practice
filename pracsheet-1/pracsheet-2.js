@@ -427,3 +427,10 @@ function next(){
 //prob-51
 let original = {a:1, b:{c:2}};
 let clone = JSON.parse(JSON.stringify(original));
+
+//prob-52
+button.onclick = () => {
+  let div = document.createElement("div");
+  div.className = "box";
+  container.appendChild(div);
+};
