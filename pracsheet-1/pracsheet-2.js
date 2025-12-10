@@ -434,3 +434,13 @@ button.onclick = () => {
   div.className = "box";
   container.appendChild(div);
 };
+
+//prob-53
+let users = [
+  {id:1, name:"A"},
+  {id:2, name:"B"}
+];
+
+let obj = {};
+users.forEach(u => obj[u.id] = u);
+console.log(obj);
