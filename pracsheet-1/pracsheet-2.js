@@ -444,3 +444,10 @@ let users = [
 let obj = {};
 users.forEach(u => obj[u.id] = u);
 console.log(obj);
+
+//prob-54
+let s = "hello_world_js";
+let camel = s.split("_").map((w,i)=>
+  i===0 ? w : w[0].toUpperCase()+w.slice(1)
+).join("");
+console.log(camel);
