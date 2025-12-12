@@ -451,3 +451,8 @@ let camel = s.split("_").map((w,i)=>
   i===0 ? w : w[0].toUpperCase()+w.slice(1)
 ).join("");
 console.log(camel);
+
+//prob-55
+let s = "a1b2c3d4";
+let result = [...s].filter(c => isNaN(c)).join("");
+console.log(result);
