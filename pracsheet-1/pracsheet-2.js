@@ -456,3 +456,7 @@ console.log(camel);
 let s = "a1b2c3d4";
 let result = [...s].filter(c => isNaN(c)).join("");
 console.log(result);
+//prob-56
+let s = "JavaScript is super powerful";
+let longest = s.split(" ").reduce((a,b)=> a.length>b.length?a:b);
+console.log(longest);
