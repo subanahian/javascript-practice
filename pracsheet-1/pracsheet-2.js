@@ -460,3 +460,8 @@ console.log(result);
 let s = "JavaScript is super powerful";
 let longest = s.split(" ").reduce((a,b)=> a.length>b.length?a:b);
 console.log(longest);
+
+//prob-57
+input.oninput = () => {
+  counter.innerText = input.value.length;
+};
