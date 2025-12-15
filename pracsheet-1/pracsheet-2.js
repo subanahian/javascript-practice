@@ -465,3 +465,7 @@ console.log(longest);
 input.oninput = () => {
   counter.innerText = input.value.length;
 };
+
+//prob=58
+let person = {a:1, b:2, c:3};
+console.log(Object.keys(person).length);
