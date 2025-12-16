@@ -469,3 +469,13 @@ input.oninput = () => {
 //prob=58
 let person = {a:1, b:2, c:3};
 console.log(Object.keys(person).length);
+
+//prob-59
+let users = [
+  {id:1, name:"A"},
+  {id:2, name:"B"}
+];
+
+let obj = {};
+users.forEach(u => obj[u.id] = u);
+console.log(obj);
