@@ -479,3 +479,8 @@ let users = [
 let obj = {};
 users.forEach(u => obj[u.id] = u);
 console.log(obj);
+
+//prob-60
+let o1 = {a:1}, o2 = {b:2};
+let m = {...o1, ...o2};
+console.log(m);
