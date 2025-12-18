@@ -484,3 +484,8 @@ console.log(obj);
 let o1 = {a:1}, o2 = {b:2};
 let m = {...o1, ...o2};
 console.log(m);
+
+//prob-61
+let s = "a1b2c3d4";
+let result = [...s].filter(c => isNaN(c)).join("");
+console.log(result);
