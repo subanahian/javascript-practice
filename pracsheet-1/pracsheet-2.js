@@ -493,7 +493,13 @@ console.log(result);
 //prob-62
 // Quick usage example:
 const fib = memoizedFibonacci();
-console.log(fib(10)); // 55
+console.log(fib(10)); 
+console.log(iterativeFibonacci(100));
 
-// Or use the iterative version for large numbers:
-console.log(iterativeFibonacci(100)); // Works efficiently
+//prob-63
+function findMissingNumber(nums) {
+    const n = nums.length;
+    const expectedSum = (n * (n + 1)) / 2;
+    const actualSum = nums.reduce((sum, num) => sum + num, 0);
+    return expectedSum - actualSum;
+}
