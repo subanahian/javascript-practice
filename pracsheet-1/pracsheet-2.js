@@ -489,3 +489,11 @@ console.log(m);
 let s = "a1b2c3d4";
 let result = [...s].filter(c => isNaN(c)).join("");
 console.log(result);
+
+//prob-62
+// Quick usage example:
+const fib = memoizedFibonacci();
+console.log(fib(10)); // 55
+
+// Or use the iterative version for large numbers:
+console.log(iterativeFibonacci(100)); // Works efficiently
