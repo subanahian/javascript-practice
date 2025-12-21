@@ -503,3 +503,8 @@ function findMissingNumber(nums) {
     const actualSum = nums.reduce((sum, num) => sum + num, 0);
     return expectedSum - actualSum;
 }
+
+//prob-64
+let s = "a1b2c3d4";
+let result = [...s].filter(c => isNaN(c)).join("");
+console.log(result);
