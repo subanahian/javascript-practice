@@ -508,3 +508,11 @@ function findMissingNumber(nums) {
 let s = "a1b2c3d4";
 let result = [...s].filter(c => isNaN(c)).join("");
 console.log(result);
+
+//prob-65
+function flatDeep(arr){
+  return arr.reduce((a,b)=> 
+    Array.isArray(b) ? a.concat(flatDeep(b)) : a.concat(b), 
+  []);
+}
+console.log(flatDeep([1,[2,[3]]])); 
