@@ -516,3 +516,12 @@ function flatDeep(arr){
   []);
 }
 console.log(flatDeep([1,[2,[3]]])); 
+//prob-66
+function findMissingNumberSet(nums) {
+    const numSet = new Set(nums);
+    for (let i = 0; i <= nums.length; i++) {
+        if (!numSet.has(i)) return i;
+    }
+    return -1;
+}
+
