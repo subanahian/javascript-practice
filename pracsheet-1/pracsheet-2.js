@@ -538,3 +538,12 @@ function twoSum(nums, target) {
 }
 
 console.log(twoSum([2, 7, 11, 15], 9)); // [0, 1]
+//prob-68
+function runningSum(nums) {
+    for (let i = 1; i < nums.length; i++) {
+        nums[i] += nums[i - 1];
+    }
+    return nums;
+}
+
+console.log(runningSum([1,2,3,4])); // [1,3,6,10]
