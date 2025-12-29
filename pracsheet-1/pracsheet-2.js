@@ -590,4 +590,10 @@ function subarraySum(nums, k) {
     return count;
 }
 
-console.log(subarraySum([1, 1, 1], 2)); // 2
+console.log(subarraySum([1, 1, 1], 2));
+
+//prob-70
+for(let i=1;i<=3;i++){
+  await new Promise(r=>setTimeout(r,1000));
+  console.log(i);
+}
