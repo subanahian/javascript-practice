@@ -605,3 +605,14 @@ const pipe = (...fns) => x => fns.reduce((v,f)=>f(v), x);
 //prob-74
 const add = a => b => c => a+b+c;
 console.log(add(1)(2)(3));
+
+//prob-75
+async function fetchData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
