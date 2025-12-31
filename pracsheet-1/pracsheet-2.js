@@ -601,3 +601,7 @@ for(let i=1;i<=3;i++){
 
 //prob-73
 const pipe = (...fns) => x => fns.reduce((v,f)=>f(v), x);
+
+//prob-74
+const add = a => b => c => a+b+c;
+console.log(add(1)(2)(3));
