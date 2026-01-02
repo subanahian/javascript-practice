@@ -617,3 +617,12 @@ async function fetchData() {
   }
 }
 //prob-76
+function once(fn){
+  let done = false;
+  return function(){
+    if(!done){
+      done = true;
+      fn();
+    }
+  }
+}
