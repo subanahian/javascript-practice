@@ -626,3 +626,8 @@ function once(fn){
     }
   }
 }
+//prob77
+for(let i=1;i<=3;i++){
+  await new Promise(r=>setTimeout(r,1000));
+  console.log(i);
+}
