@@ -631,3 +631,9 @@ for(let i=1;i<=3;i++){
   await new Promise(r=>setTimeout(r,1000));
   console.log(i);
 }
+//prob-78
+try {
+  let res = await fetch(url);
+} catch(err){
+  console.log(err);
+}
