@@ -637,3 +637,13 @@ try {
 } catch(err){
   console.log(err);
 }
+//prob-78
+function once(fn){
+  let done = false;
+  return function(){
+    if(!done){
+      done = true;
+      fn();
+    }
+  }
+}
