@@ -653,3 +653,10 @@ try {
 } catch(err){
   console.log(err);
 }
+//prob-80
+function counter(){
+  let count = 0;
+  return () => ++count;
+}
+let c = counter();
+console.log(c(), c(), c());
