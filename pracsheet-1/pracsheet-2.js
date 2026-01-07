@@ -647,3 +647,9 @@ function once(fn){
     }
   }
 }
+//prob-79
+try {
+  let res = await fetch(url);
+} catch(err){
+  console.log(err);
+}
