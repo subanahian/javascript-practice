@@ -660,3 +660,6 @@ function counter(){
 }
 let c = counter();
 console.log(c(), c(), c());
+//prob-81
+let mn = "banana";
+console.log([...new Set(mn)].join(""));
