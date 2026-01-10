@@ -667,3 +667,14 @@ console.log([...new Set(mn)].join(""));
 let a = [1,2,3];
 let b = [2,3,4];
 console.log(a.filter(x => b.includes(x)));
+
+//prob-83
+function chunk(arr, size){
+  let res = [];
+  for(let i=0;i<arr.length;i+=size){
+    res.push(arr.slice(i, i+size));
+  }
+  return res;
+}
+console.log(chunk([1,2,3,4,5], 2));
+
