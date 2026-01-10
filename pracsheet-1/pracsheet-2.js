@@ -663,3 +663,7 @@ console.log(c(), c(), c());
 //prob-81
 let mn = "banana";
 console.log([...new Set(mn)].join(""));
+//prob-82
+let a = [1,2,3];
+let b = [2,3,4];
+console.log(a.filter(x => b.includes(x)));
