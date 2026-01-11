@@ -677,4 +677,8 @@ function chunk(arr, size){
   return res;
 }
 console.log(chunk([1,2,3,4,5], 2));
+//pr0b-84
+function equal(a,b){
+  return a.length === b.length && a.every((v,i)=>v===b[i]);
+}
 
