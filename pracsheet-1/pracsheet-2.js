@@ -681,4 +681,8 @@ console.log(chunk([1,2,3,4,5], 2));
 function equal(a,b){
   return a.length === b.length && a.every((v,i)=>v===b[i]);
 }
+//prob-85
+function equal(a,b){
+  return a.length === b.length && a.every((v,i)=>v===b[i]);
+}
 
