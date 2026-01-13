@@ -685,4 +685,12 @@ function equal(a,b){
 function equal(a,b){
   return a.length === b.length && a.every((v,i)=>v===b[i]);
 }
+//prob-86
+let arr = [1,2,4,6];
+let mis = [];
+
+for(let i=1;i<=6;i++){
+  if(!arr.includes(i)) mis.push(i);
+}
+console.log(mis);
 
