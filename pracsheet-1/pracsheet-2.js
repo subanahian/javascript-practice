@@ -693,4 +693,13 @@ for(let i=1;i<=6;i++){
   if(!arr.includes(i)) mis.push(i);
 }
 console.log(mis);
+//prob-87
+function memo(fn){
+  let cache = {};
+  return function(n){
+    if(cache[n]) return cache[n];
+    return cache[n] = fn(n);
+  };
+}
+
 
