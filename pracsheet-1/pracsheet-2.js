@@ -702,4 +702,12 @@ function memo(fn){
   };
 }
 
+//prob-88
+function memo(fn){
+  let cache = {};
+  return function(n){
+    if(cache[n]) return cache[n];
+    return cache[n] = fn(n);
+  };
+}
 
