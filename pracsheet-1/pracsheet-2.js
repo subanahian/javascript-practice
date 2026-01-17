@@ -710,4 +710,11 @@ function memo(fn){
     return cache[n] = fn(n);
   };
 }
+//prob-89
+let arr = [1,2,4,6];
+let missing = [];
 
+for(let i=1;i<=6;i++){
+  if(!arr.includes(i)) missing.push(i);
+}
+console.log(missing);
