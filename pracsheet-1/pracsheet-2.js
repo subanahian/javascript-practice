@@ -718,3 +718,6 @@ for(let i=1;i<=6;i++){
   if(!arr.includes(i)) missing.push(i);
 }
 console.log(missing);
+//prob-90
+let str = "JavaScript";
+console.log(str.includes("Script"));
