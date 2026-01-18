@@ -721,3 +721,8 @@ console.log(missing);
 //prob-90
 let str = "JavaScript";
 console.log(str.includes("Script"));
+//prob-91
+function isPowerOfTwo(n){
+  return n > 0 && (n & (n - 1)) === 0;
+}
+console.log(isPowerOfTwo(16)); // true
