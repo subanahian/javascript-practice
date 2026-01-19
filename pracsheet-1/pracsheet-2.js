@@ -726,3 +726,10 @@ function isPowerOfTwo(n){
   return n > 0 && (n & (n - 1)) === 0;
 }
 console.log(isPowerOfTwo(16)); // true
+//prob-92
+async function retry(fn, t){
+  while(t--){
+    try { return await fn(); }
+    catch(e){}
+  }
+}
