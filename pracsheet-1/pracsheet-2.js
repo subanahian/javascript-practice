@@ -733,3 +733,8 @@ async function retry(fn, t){
     catch(e){}
   }
 }
+//prob-93
+function equal(a,b){
+  return a.length === b.length && a.every((v,i)=>v===b[i]);
+}
+
