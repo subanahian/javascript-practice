@@ -737,4 +737,14 @@ async function retry(fn, t){
 function equal(a,b){
   return a.length === b.length && a.every((v,i)=>v===b[i]);
 }
+//prob-94
+let n = 123;
+let rev = 0;
+
+while(n > 0){
+  rev = rev * 10 + (n % 10);
+  n = Math.floor(n / 10);
+}
+console.log(rev);
+
 
