@@ -746,5 +746,6 @@ while(n > 0){
   n = Math.floor(n / 10);
 }
 console.log(rev);
-
+//prob-95
+btn.onclick = () => btn.disabled = true;
 
