@@ -748,4 +748,7 @@ while(n > 0){
 console.log(rev);
 //prob-95
 btn.onclick = () => btn.disabled = true;
+//prob-96
+let text = "I love JavaScript";
+console.log(text.trim().split(/\s+/).length);
 
