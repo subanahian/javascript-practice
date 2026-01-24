@@ -749,6 +749,12 @@ console.log(rev);
 //prob-95
 btn.onclick = () => btn.disabled = true;
 //prob-96
-let text = "I love JavaScript";
-console.log(text.trim().split(/\s+/).length);
+let t = "I love JavaScript";
+console.log(t.trim().split(/\s+/).length);
+//prob-97
+function isPalNum(n){
+  return n === Number(n.toString().split("").reverse().join(""));
+}
+console.log(isPalNum(121)); // true
+
 
