@@ -756,5 +756,8 @@ function isPalNum(n){
   return n === Number(n.toString().split("").reverse().join(""));
 }
 console.log(isPalNum(121)); // true
+//prob-98
+window.addEventListener("online", ()=>console.log("Online"));
+window.addEventListener("offline", ()=>console.log("Offline"));
 
 
