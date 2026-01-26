@@ -760,4 +760,8 @@ console.log(isPalNum(121)); // true
 window.addEventListener("online", ()=>console.log("Online"));
 window.addEventListener("offline", ()=>console.log("Offline"));
 
+//prob-99
+let user = JSON.parse(localStorage.getItem("user"));
+console.log(user);
+
 
