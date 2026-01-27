@@ -763,5 +763,7 @@ window.addEventListener("offline", ()=>console.log("Offline"));
 //prob-99
 let user = JSON.parse(localStorage.getItem("user"));
 console.log(user);
+//prob-100
+localStorage.setItem("user", JSON.stringify({name:"Raj"}));
 
 
