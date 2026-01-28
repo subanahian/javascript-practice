@@ -765,5 +765,11 @@ let user = JSON.parse(localStorage.getItem("user"));
 console.log(user);
 //prob-100
 localStorage.setItem("user", JSON.stringify({name:"Raj"}));
+//prob-101
+window.onscroll = () => {
+  if(window.innerHeight + window.scrollY >= document.body.offsetHeight){
+    console.log("Load more");
+  }
+};
 
 
