@@ -771,5 +771,7 @@ window.onscroll = () => {
     console.log("Load more");
   }
 };
+//prob-102
+localStorage.setItem("user", JSON.stringify({name:"Raj"}));
 
 
