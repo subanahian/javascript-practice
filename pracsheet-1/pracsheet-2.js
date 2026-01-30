@@ -773,5 +773,9 @@ window.onscroll = () => {
 };
 //prob-102
 localStorage.setItem("user", JSON.stringify({name:"Raj"}));
+//prob-103
+document.addEventListener("click", e => {
+  if(!box.contains(e.target)) console.log("Outside");
+});
 
 
