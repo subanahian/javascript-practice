@@ -777,5 +777,12 @@ localStorage.setItem("user", JSON.stringify({name:"Raj"}));
 document.addEventListener("click", e => {
   if(!box.contains(e.target)) console.log("Outside");
 });
+//prob-104
+Function.prototype.myBind = function(ctx){
+  let fn = this;
+  return function(...args){
+    return fn.apply(ctx, args);
+  };
+};
 
 
