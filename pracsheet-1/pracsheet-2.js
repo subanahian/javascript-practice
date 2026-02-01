@@ -784,5 +784,12 @@ Function.prototype.myBind = function(ctx){
     return fn.apply(ctx, args);
   };
 };
+//prob-105
+async function retry(fn, n){
+  while(n--){
+    try { return await fn(); }
+    catch(e){}
+  }
+}
 
 
