@@ -798,5 +798,12 @@ function sum(a){
   }
 }
 console.log(sum(1)(2)(3)());
+//prob-107
+async function retry(fn, n){
+  while(n--){
+    try { return await fn(); }
+    catch(e){}
+  }
+}
 
 
