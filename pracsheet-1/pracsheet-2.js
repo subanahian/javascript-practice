@@ -791,5 +791,12 @@ async function retry(fn, n){
     catch(e){}
   }
 }
+//prob-106
+function sum(a){
+  return function(b){
+    return b ? sum(a+b) : a;
+  }
+}
+console.log(sum(1)(2)(3)());
 
 
