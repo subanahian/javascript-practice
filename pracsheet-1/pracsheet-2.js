@@ -815,4 +815,15 @@ console.log(sum(1)(2)(3)());
 //prob-109
 const compose = (...fns) => x =>
   fns.reduceRight((v,f)=>f(v), x);
+//prob-110
+function throttle(fn, delay){
+  let last = 0;
+  return function(){
+    let now = Date.now();
+    if(now - last >= delay){
+      last = now;
+      fn();
+    }
+  };
+}
 
