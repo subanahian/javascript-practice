@@ -826,4 +826,7 @@ function throttle(fn, delay){
     }
   };
 }
+//110
+let arr = [0,false,null,5,"",7];
+console.log(arr.filter(Boolean));
 
