@@ -826,7 +826,12 @@ function throttle(fn, delay){
     }
   };
 }
-//110
+//prob-110
 let arr = [0,false,null,5,"",7];
 console.log(arr.filter(Boolean));
-
+//prob-111
+function majority(arr){
+  let count = {};
+  arr.forEach(n=>count[n]=(count[n]||0)+1);
+  return Object.keys(count).find(k=>count[k] > arr.length/2);
+}
