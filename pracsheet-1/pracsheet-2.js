@@ -835,3 +835,8 @@ function majority(arr){
   arr.forEach(n=>count[n]=(count[n]||0)+1);
   return Object.keys(count).find(k=>count[k] > arr.length/2);
 }
+//prob-112
+let arr = [1,2,2,3];
+let map = new Map();
+arr.forEach(x => map.set(x, (map.get(x)||0)+1));
+console.log(map);
