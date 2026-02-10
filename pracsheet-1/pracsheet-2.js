@@ -840,3 +840,10 @@ let arr = [1,2,2,3];
 let map = new Map();
 arr.forEach(x => map.set(x, (map.get(x)||0)+1));
 console.log(map);
+//prob-113
+function isSorted(arr){
+  for(let i=1;i<arr.length;i++){
+    if(arr[i] < arr[i-1]) return false;
+  }
+  return true;
+}
