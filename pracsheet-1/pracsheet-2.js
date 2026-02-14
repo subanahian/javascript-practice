@@ -858,3 +858,6 @@ function isSorted(arr){
 function random(min, max){
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+//prob-115
+let n = 98321;
+console.log(Math.max(...n.toString()));
