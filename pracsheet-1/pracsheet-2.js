@@ -861,3 +861,8 @@ function random(min, max){
 //prob-115
 let n = 98321;
 console.log(Math.max(...n.toString()));
+//prob-116
+function isPalNum(n){
+  return n === Number(n.toString().split("").reverse().join(""));
+}
+console.log(isPalNum(121)); // true
