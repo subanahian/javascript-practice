@@ -871,3 +871,8 @@ function isPalNum(n){
   return n === Number(n.toString().split("").reverse().join(""));
 }
 console.log(isPalNum(121)); // true
+//prob-117
+for(let i=1;i<=3;i++){
+  await new Promise(r=>setTimeout(r,1000));
+  console.log(i);
+}
