@@ -879,3 +879,9 @@ for(let i=1;i<=3;i++){
 //prob-118
 let n = 9855321;
 console.log(Math.max(...n.toString()));
+//prob-119
+document.getElementById("list").addEventListener("click", function(e){
+  if(e.target.tagName === "LI"){
+    console.log(e.target.innerText);
+  }
+});
