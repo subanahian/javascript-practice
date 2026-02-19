@@ -876,3 +876,6 @@ for(let i=1;i<=3;i++){
   await new Promise(r=>setTimeout(r,1000));
   console.log(i);
 }
+//prob-118
+let n = 9855321;
+console.log(Math.max(...n.toString()));
