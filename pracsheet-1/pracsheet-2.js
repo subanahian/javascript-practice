@@ -885,3 +885,14 @@ document.getElementById("list").addEventListener("click", function(e){
     console.log(e.target.innerText);
   }
 });
+//prob-120
+function binarySearch(arr,target){
+  let l=0,r=arr.length-1;
+  while(l<=r){
+    let m=Math.floor((l+r)/2);
+    if(arr[m]===target) return m;
+    if(arr[m]<target) l=m+1;
+    else r=m-1;
+  }
+  return -1;
+}
