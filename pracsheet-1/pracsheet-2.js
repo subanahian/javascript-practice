@@ -906,3 +906,14 @@ function hasCycle(head){
   }
   return false;
 }
+//prob-122
+function reverse(head){
+  let prev=null;
+  while(head){
+    let next=head.next;
+    head.next=prev;
+    prev=head;
+    head=next;
+  }
+  return prev;
+}
