@@ -926,3 +926,9 @@ function twoSum(arr,target){
     map[arr[i]] = i;
   }
 }
+//prob-124
+document.getElementById("list").addEventListener("click", function(e){
+  if(e.target.tagName === "LI"){
+    console.log(e.target.innerText);
+  }
+});
