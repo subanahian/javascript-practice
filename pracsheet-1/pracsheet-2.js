@@ -942,3 +942,15 @@ function deepFreeze(obj){
   });
   return obj;
 }
+//prob-126
+function myInterval(fn, delay){
+  let id = {};
+  function run(){
+    id.timer = setTimeout(()=>{
+      fn();
+      run();
+    }, delay);
+  }
+  run();
+  return id;
+}
