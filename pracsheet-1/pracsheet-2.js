@@ -982,3 +982,11 @@ class Stack {
   peek(){ return this.items[this.items.length-1]; }
   isEmpty(){ return this.items.length === 0; }
 }
+//prob-130
+class Queue {
+  constructor(){
+    this.items = [];
+  }
+  enqueue(val){ this.items.push(val); }
+  dequeue(){ return this.items.shift(); }
+}
