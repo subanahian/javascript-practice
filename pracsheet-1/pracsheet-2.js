@@ -990,3 +990,8 @@ class Queue {
   enqueue(val){ this.items.push(val); }
   dequeue(){ return this.items.shift(); }
 }
+//prob-131
+let n = 10;
+let sum = 0;
+for (let i = 1; i <= n; i++) sum += i;
+console.log(sum);
