@@ -1004,3 +1004,7 @@ function maxSubArray(arr){
   }
   return max;
 }
+//prob-133
+function reverseWords(str){
+  return str.split(" ").reverse().join(" ");
+}
