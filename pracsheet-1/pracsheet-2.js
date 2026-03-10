@@ -1021,3 +1021,12 @@ function maxSubArray(arr){
 function reverseWords(str){
   return str.split(" ").reverse().join(" ");
 }
+//prob-166
+function maxSubArray(arr){
+  let max=arr[0], curr=arr[0];
+  for(let i=1;i<arr.length;i++){
+    curr=Math.max(arr[i], curr+arr[i]);
+    max=Math.max(max,curr);
+  }
+  return max;
+}
