@@ -1034,3 +1034,10 @@ function maxSubArray(arr){
 function reverseWords(str){
   return str.split(" ").reverse().join(" ");
 }
+//prob-168
+function Person(name){
+  this.name=name;
+}
+Person.prototype.sayHi=function(){
+  console.log("Hi "+this.name);
+}
