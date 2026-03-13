@@ -1041,3 +1041,11 @@ function Person(name){
 Person.prototype.sayHi=function(){
   console.log("Hi "+this.name);
 }
+//prob-167
+function greet(){ console.log(this.name); }
+let obj={name:"Raj"};
+
+greet.call(obj);
+greet.apply(obj);
+let bound=greet.bind(obj);
+bound();
