@@ -1041,7 +1041,7 @@ function Person(name){
 Person.prototype.sayHi=function(){
   console.log("Hi "+this.name);
 }
-//prob-167
+//prob-169
 function greet(){ console.log(this.name); }
 let obj={name:"Raj"};
 
@@ -1049,3 +1049,17 @@ greet.call(obj);
 greet.apply(obj);
 let bound=greet.bind(obj);
 bound();
+
+//prob-170
+console.log(a);
+var a=10; // undefined (hoisted)
+
+//prob-
+function outer(){
+  let count=0;
+  return function(){
+    return ++count;
+  }
+}
+let c=outer();
+console.log(c(),c());
