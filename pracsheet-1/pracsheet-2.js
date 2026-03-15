@@ -1054,7 +1054,7 @@ bound();
 console.log(a);
 var a=10; // undefined (hoisted)
 
-//prob-
+//prob-171
 function outer(){
   let count=0;
   return function(){
@@ -1063,3 +1063,14 @@ function outer(){
 }
 let c=outer();
 console.log(c(),c());
+
+//prob-172
+function flatten(arr){
+  let res=[];
+  for(let el of arr){
+    if(Array.isArray(el))
+      res=res.concat(flatten(el));
+    else res.push(el);
+  }
+  return res;
+}
