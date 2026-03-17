@@ -1074,3 +1074,11 @@ function flatten(arr){
   }
   return res;
 }
+//prob-180
+function greet(){ console.log(this.name); }
+let obj={name:"Raj"};
+
+greet.call(obj);
+greet.apply(obj);
+let bound=greet.bind(obj);
+bound();
