@@ -1074,7 +1074,7 @@ function flatten(arr){
   }
   return res;
 }
-//prob-180
+//prob-179
 function greet(){ console.log(this.name); }
 let obj={name:"Raj"};
 
@@ -1082,3 +1082,12 @@ greet.call(obj);
 greet.apply(obj);
 let bound=greet.bind(obj);
 bound();
+
+//prob-14
+class Queue {
+  constructor(){
+    this.items = [];
+  }
+  enqueue(val){ this.items.push(val); }
+  dequeue(){ return this.items.shift(); }
+}
