@@ -1083,11 +1083,16 @@ greet.apply(obj);
 let bound=greet.bind(obj);
 bound();
 
-//prob-14
+//prob-180
 class Queue {
   constructor(){
     this.items = [];
   }
   enqueue(val){ this.items.push(val); }
   dequeue(){ return this.items.shift(); }
+}
+//prob-182
+function fib(n){
+  if(n<=1) return n;
+  return fib(n-1)+fib(n-2);
 }
