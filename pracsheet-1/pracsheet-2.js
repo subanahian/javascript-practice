@@ -1097,3 +1097,23 @@ function fib(n){
   return fib(n-1)+fib(n-2);
 }
 //prob-183
+class Node {
+  constructor(val){
+    this.val = val;
+    this.left = null;
+    this.right = null;
+  }
+}
+//prob-184
+function clone(node, map=new Map()){
+  if(map.has(node)) return map.get(node);
+
+  let newNode = {val:node.val, neighbors:[]};
+  map.set(node,newNode);
+
+  for(let nei of node.neighbors){
+    newNode.neighbors.push(clone(nei,map));
+  }
+
+  return newNode;
+}
