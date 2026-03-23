@@ -1132,3 +1132,18 @@ function cycle(node, visited=new Set(), rec=new Set()){
   rec.delete(node);
   return false;
 }
+//prob-186
+function cycle(node, visited=new Set(), rec=new Set()){
+  if(rec.has(node)) return true;
+  if(visited.has(node)) return false;
+
+  visited.add(node);
+  rec.add(node);
+
+  for(let nei of graph[node]||[]){
+    if(cycle(nei, visited, rec)) return true;
+  }
+
+  rec.delete(node);
+  return false;
+}
