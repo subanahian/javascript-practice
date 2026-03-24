@@ -1147,3 +1147,14 @@ function cycle(node, visited=new Set(), rec=new Set()){
   rec.delete(node);
   return false;
 }
+//prob-187
+function topo(node, visited=new Set(), stack=[]){
+  visited.add(node);
+
+  for(let nei of graph[node]||[]){
+    if(!visited.has(nei)) topo(nei, visited, stack);
+  }
+
+  stack.push(node);
+  return stack;
+}
