@@ -1158,3 +1158,15 @@ function topo(node, visited=new Set(), stack=[]){
   stack.push(node);
   return stack;
 }
+//prob-188
+function countComponents(graph){
+  let visited=new Set(), count=0;
+
+  for(let node in graph){
+    if(!visited.has(node)){
+      dfs(node, visited);
+      count++;
+    }
+  }
+  return count;
+}
