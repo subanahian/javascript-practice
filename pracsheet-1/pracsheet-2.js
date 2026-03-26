@@ -1170,3 +1170,10 @@ function countComponents(graph){
   }
   return count;
 }
+//prob-189
+let graph = {
+  A: ["B","C"],
+  B: ["A","D"],
+  C: ["A"],
+  D: ["B"]
+};
