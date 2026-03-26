@@ -1177,3 +1177,11 @@ let graph = {
   C: ["A"],
   D: ["B"]
 };
+//prob-190
+function invert(root){
+  if(!root) return null;
+  [root.left, root.right] = [root.right, root.left];
+  invert(root.left);
+  invert(root.right);
+  return root;
+}
