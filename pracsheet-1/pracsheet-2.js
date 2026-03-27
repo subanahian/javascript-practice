@@ -1185,3 +1185,19 @@ function invert(root){
   invert(root.right);
   return root;
 }
+//prob-191
+function bfs(start){
+  let q=[start], visited=new Set([start]);
+
+  while(q.length){
+    let node=q.shift();
+    console.log(node);
+
+    for(let nei of graph[node]){
+      if(!visited.has(nei)){
+        visited.add(nei);
+        q.push(nei);
+      }
+    }
+  }
+}
