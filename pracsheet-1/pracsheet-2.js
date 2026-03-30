@@ -1209,3 +1209,10 @@ function LCA(root,p,q){
   if(left && right) return root;
   return left || right;
 }
+//prob-193
+function postorder(root){
+  if(!root) return;
+  postorder(root.left);
+  postorder(root.right);
+  console.log(root.val);
+}
