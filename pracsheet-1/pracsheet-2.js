@@ -1216,3 +1216,10 @@ function postorder(root){
   postorder(root.right);
   console.log(root.val);
 }
+//prob-194
+let obj = {
+  name:"JS",
+  show(){
+    console.log(this.name);
+  }
+};
