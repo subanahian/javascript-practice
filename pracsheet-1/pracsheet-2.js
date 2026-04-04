@@ -1228,3 +1228,7 @@ for(let i=1;i<=3;i++){
   setTimeout(()=>console.log(i),1000);
 }
 //prob-196
+function kthLargest(arr,k){
+  arr.sort((a,b)=>b-a);
+  return arr[k-1];
+}
