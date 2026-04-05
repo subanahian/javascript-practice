@@ -1232,3 +1232,10 @@ function kthLargest(arr,k){
   arr.sort((a,b)=>b-a);
   return arr[k-1];
 }
+//prob-197
+let obj = {
+  name:"JS",
+  show(){
+    console.log(this.name);
+  }
+};
