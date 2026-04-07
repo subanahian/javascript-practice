@@ -1239,3 +1239,8 @@ let obj = {
     console.log(this.name);
   }
 };
+//prob-198
+function outer(){
+  let i=0;
+  return () => i++;
+}
