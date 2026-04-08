@@ -1248,3 +1248,7 @@ function outer(){
 function reverseString(str) {
   return str.split('').reverse().join('');
 }
+//200
+function isAnagram(a, b) {
+  return a.split('').sort().join('') === b.split('').sort().join('');
+}
