@@ -1244,3 +1244,7 @@ function outer(){
   let i=0;
   return () => i++;
 }
+//prob-199
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
