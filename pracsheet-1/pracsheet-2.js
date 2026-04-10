@@ -1252,3 +1252,8 @@ function reverseString(str) {
 function isAnagram(a, b) {
   return a.split('').sort().join('') === b.split('').sort().join('');
 }
+//201
+let a = {x:1};
+let b = a;
+b.x = 5;
+console.log(a.x); // 5
