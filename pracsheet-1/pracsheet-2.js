@@ -1256,4 +1256,7 @@ function isAnagram(a, b) {
 let a = {x:1};
 let b = a;
 b.x = 5;
-console.log(a.x); // 5
+console.log(a.x);
+//prob-201
+onsole.log(isNaN("hello")); // true
+console.log(Number.isNaN("hello")); // false
