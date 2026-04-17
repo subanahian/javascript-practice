@@ -1318,3 +1318,21 @@ function cycle(node, visited=new Set(), rec=new Set()){
   rec.delete(node);
   return false;
 }
+//prob-205
+function longestK(s, k){
+  let map = {}, left = 0, max = 0;
+
+  for(let right=0; right<s.length; right++){
+    map[s[right]] = (map[s[right]] || 0) + 1;
+
+    while(Object.keys(map).length > k){
+      map[s[left]]--;
+      if(map[s[left]] === 0) delete map[s[left]];
+      left++;
+    }
+
+    max = Math.max(max, right - left + 1);
+  }
+
+  return max;
+}
