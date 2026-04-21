@@ -1355,8 +1355,12 @@ for(let i=1;i<arr.length;i++){
 }
 
 console.log(prefix);
+
 //prob-208
 const memo = fn => {
   let cache={};
   return n => cache[n] || (cache[n] = fn(n));
 };
+
+//prob-209
+<img loading="lazy" src="img.jpg">
