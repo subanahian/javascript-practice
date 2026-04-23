@@ -1363,4 +1363,10 @@ const memo = fn => {
 };
 
 //prob-209
-<img loading="lazy" src="img.jpg">
+<img loading="lazy" src="img.jpg"></img>
+
+//prob-210
+const memo = fn => {
+  let cache={};
+  return n => cache[n] || (cache[n] = fn(n));
+};
