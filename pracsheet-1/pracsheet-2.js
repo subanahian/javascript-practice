@@ -1375,3 +1375,15 @@ if(window.innerHeight + window.scrollY >= document.body.offsetHeight){
   fetchMore();
 }
 //prob-212
+function sqrt(n){
+  let l=0, r=n;
+
+  while(l<=r){
+    let m=Math.floor((l+r)/2);
+    if(m*m === n) return m;
+    if(m*m < n) l=m+1;
+    else r=m-1;
+  }
+
+  return r;
+}
