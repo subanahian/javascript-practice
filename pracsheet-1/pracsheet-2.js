@@ -1396,3 +1396,19 @@ for(let i=1;i<arr.length;i++){
 }
 
 console.log(prefix);
+//prob-213
+function rateLimiter(limit, interval){
+  let calls = [];
+
+  return function(){
+    let now = Date.now();
+    calls = calls.filter(t => now - t < interval);
+
+    if(calls.length < limit){
+      calls.push(now);
+      console.log("Allowed");
+    } else {
+      console.log("Blocked");
+    }
+  };
+}
