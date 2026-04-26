@@ -1387,3 +1387,12 @@ function sqrt(n){
 
   return r;
 }
+//prob-212
+let arr = [1,2,3,4];
+let prefix = [arr[0]];
+
+for(let i=1;i<arr.length;i++){
+  prefix[i] = prefix[i-1] + arr[i];
+}
+
+console.log(prefix);
