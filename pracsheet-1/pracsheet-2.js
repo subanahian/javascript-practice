@@ -1412,3 +1412,30 @@ function rateLimiter(limit, interval){
     }
   };
 }
+//prob-214
+class TaskQueue {
+  constructor(limit){
+    this.limit = limit;
+    this.running = 0;
+    this.queue = [];
+  }
+
+  add(task){
+    this.queue.push(task);
+    this.run();
+  }
+
+  run(){
+    if(this.running >= this.limit || !this.queue.length) return;
+
+    let task = this.queue.shift();
+    this.running++;
+
+    task().then(()=>{
+      this.running--;
+      this.run();
+    });
+
+    this.run();
+  }
+}
