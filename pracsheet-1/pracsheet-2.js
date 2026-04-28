@@ -1439,3 +1439,11 @@ class TaskQueue {
     this.run();
   }
 }
+//prob-215
+async function poll(fn, interval){
+  while(true){
+    let res = await fn();
+    if(res) break;
+    await new Promise(r => setTimeout(r, interval));
+  }
+}
