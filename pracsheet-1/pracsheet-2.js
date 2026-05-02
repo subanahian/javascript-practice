@@ -1477,3 +1477,20 @@ function rateLimiter(limit, interval){
     }
   };
 }
+//prob-218
+function execute(tasks){
+  let visited = new Set();
+
+  function run(task){
+    if(visited.has(task)) return;
+    visited.add(task);
+
+    for(let dep of task.deps || []){
+      run(dep);
+    }
+
+    console.log("Run:", task.name);
+  }
+
+  tasks.forEach(run);
+}
