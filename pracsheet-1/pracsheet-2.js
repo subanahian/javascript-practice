@@ -1502,3 +1502,14 @@ async function poll(fn, interval){
     await new Promise(r => setTimeout(r, interval));
   }
 }
+//prob-220
+function groupAnagrams(arr){
+  let map = {};
+
+  for(let word of arr){
+    let key = word.split("").sort().join("");
+    (map[key] = map[key] || []).push(word);
+  }
+
+  return Object.values(map);
+}
