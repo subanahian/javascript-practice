@@ -1494,3 +1494,11 @@ function execute(tasks){
 
   tasks.forEach(run);
 }
+//prob-219
+async function poll(fn, interval){
+  while(true){
+    let res = await fn();
+    if(res) break;
+    await new Promise(r => setTimeout(r, interval));
+  }
+}
