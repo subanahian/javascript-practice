@@ -1513,3 +1513,18 @@ function groupAnagrams(arr){
 
   return Object.values(map);
 }
+//prob-221
+function dailyTemp(T){
+  let res = Array(T.length).fill(0);
+  let stack = [];
+
+  for(let i=0;i<T.length;i++){
+    while(stack.length && T[i] > T[stack[stack.length-1]]){
+      let idx = stack.pop();
+      res[idx] = i - idx;
+    }
+    stack.push(i);
+  }
+
+  return res;
+}
