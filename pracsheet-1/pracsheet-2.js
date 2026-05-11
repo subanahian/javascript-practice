@@ -1574,3 +1574,17 @@ function findDuplicates(arr) {
 }
 
 console.log(findDuplicates([1,2,3,2,4,5,1]));
+//prob-226
+function findDuplicates(arr) {
+  let duplicates = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.indexOf(arr[i]) !== i) {
+      duplicates.push(arr[i]);
+    }
+  }
+
+  return [...new Set(duplicates)];
+}
+
+console.log(findDuplicates([1,2,3,2,4,5,1]));
