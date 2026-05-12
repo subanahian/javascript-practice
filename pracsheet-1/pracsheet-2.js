@@ -1590,3 +1590,11 @@ function findDuplicates(arr) {
 console.log(findDuplicates([1,2,3,2,4,5,1]));
 
 //prob-227
+function capitalizeWords(str) {
+  return str
+    .split(" ")
+    .map(word => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+console.log(capitalizeWords("hello world"));
