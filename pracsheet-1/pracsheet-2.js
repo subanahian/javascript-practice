@@ -1598,3 +1598,10 @@ function capitalizeWords(str) {
 }
 
 console.log(capitalizeWords("hello world"));
+
+//prob-228
+function reverseArray(arr) {
+  return arr.reverse();
+}
+
+console.log(reverseArray([1,2,3]));
