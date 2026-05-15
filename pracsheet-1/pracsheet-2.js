@@ -1605,3 +1605,18 @@ function reverseArray(arr) {
 }
 
 console.log(reverseArray([1,2,3]));
+
+//prob-229
+function isPrime(num) {
+  if(num < 2) return false;
+
+  for(let i = 2; i < num; i++) {
+    if(num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+console.log(isPrime(7));
