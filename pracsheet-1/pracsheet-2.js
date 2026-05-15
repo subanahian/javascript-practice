@@ -1620,3 +1620,16 @@ function isPrime(num) {
 }
 
 console.log(isPrime(7));
+
+//prob-230
+function gcd(a, b) {
+  while(b !== 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+
+  return a;
+}
+
+console.log(gcd(12, 18));
