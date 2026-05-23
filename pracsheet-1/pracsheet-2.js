@@ -1718,3 +1718,10 @@ function factorial(n) {
 }
 
 console.log(factorial(5));
+
+//prob-237
+function reverseWords(str) {
+  return str.split(" ").reverse().join(" ");
+}
+
+console.log(reverseWords("I love JS"));
