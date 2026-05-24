@@ -1725,3 +1725,13 @@ function reverseWords(str) {
 }
 
 console.log(reverseWords("I love JS"));
+
+//prob-238
+function secondLargest(arr) {
+  let unique = [...new Set(arr)];
+  unique.sort((a,b) => b-a);
+
+  return unique[1];
+}
+
+console.log(secondLargest([1,5,8,3]));
