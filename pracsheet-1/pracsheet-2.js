@@ -1735,3 +1735,19 @@ function secondLargest(arr) {
 }
 
 console.log(secondLargest([1,5,8,3]));
+
+//prob-239
+function countConsonants(str) {
+  let vowels = "aeiou";
+  let count = 0;
+
+  for(let char of str.toLowerCase()) {
+    if(char >= 'a' && char <= 'z' && !vowels.includes(char)) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+console.log(countConsonants("javascript"));
