@@ -1751,3 +1751,19 @@ function countConsonants(str) {
 }
 
 console.log(countConsonants("javascript"));
+
+//prob-240
+function countConsonants(str) {
+  let vowels = "aeiou";
+  let count = 0;
+
+  for(let char of str.toLowerCase()) {
+    if(char >= 'a' && char <= 'z' && !vowels.includes(char)) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+console.log(countConsonants("javascript"));
