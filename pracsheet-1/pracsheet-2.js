@@ -1767,3 +1767,12 @@ function countConsonants(str) {
 }
 
 console.log(countConsonants("javascript"));
+
+//241
+function palindromeNumber(num) {
+  let str = num.toString();
+
+  return str === str.split("").reverse().join("");
+}
+
+console.log(palindromeNumber(121));
