@@ -1782,3 +1782,18 @@ function isPalindrome(str) {
 }
 
 console.log(isPalindrome("madam"));
+
+//prob-243
+function lcm(a, b) {
+  let max = Math.max(a, b);
+
+  while (true) {
+    if (max % a === 0 && max % b === 0) {
+      return max;
+    }
+    max++;
+  }
+}
+
+console.log(lcm(4, 6));
+//pro-244
