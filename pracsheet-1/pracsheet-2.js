@@ -1776,3 +1776,9 @@ function palindromeNumber(num) {
 }
 
 console.log(palindromeNumber(121));
+//prob-242
+function isPalindrome(str) {
+  return str === str.split("").reverse().join("");
+}
+
+console.log(isPalindrome("madam"));
