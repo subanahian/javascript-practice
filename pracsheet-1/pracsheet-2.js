@@ -1768,7 +1768,7 @@ function countConsonants(str) {
 
 console.log(countConsonants("javascript"));
 
-//241
+//prob-241
 function palindromeNumber(num) {
   let str = num.toString();
 
