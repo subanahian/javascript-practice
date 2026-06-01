@@ -1820,3 +1820,13 @@ function groupAnagrams(arr) {
 }
 
 console.log(groupAnagrams(["eat","tea","tan","ate","nat","bat"]));
+
+//prob-246
+function isAnagram(str1, str2) {
+  let a = str1.split("").sort().join("");
+  let b = str2.split("").sort().join("");
+
+  return a === b;
+}
+
+console.log(isAnagram("listen", "silent"));
