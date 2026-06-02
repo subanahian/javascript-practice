@@ -1830,3 +1830,17 @@ function isAnagram(str1, str2) {
 }
 
 console.log(isAnagram("listen", "silent"));
+//prob-247
+function firstRepeating(str) {
+  let seen = new Set();
+
+  for(let char of str) {
+    if(seen.has(char)) {
+      return char;
+    }
+
+    seen.add(char);
+  }
+}
+
+console.log(firstRepeating("abccde"));
