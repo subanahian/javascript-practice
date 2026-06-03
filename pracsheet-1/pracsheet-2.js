@@ -1864,3 +1864,5 @@ function shortestWord(str) {
 }
 
 console.log(shortestWord("I love javascript"));
+
+//prob-250
