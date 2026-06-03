@@ -1854,3 +1854,13 @@ function firstUnique(str) {
 }
 
 console.log(firstUnique("aabbcddee"));
+//prob-249
+function shortestWord(str) {
+  let words = str.split(" ");
+
+  return words.reduce((shortest, current) =>
+    current.length < shortest.length ? current : shortest
+  );
+}
+
+console.log(shortestWord("I love javascript"));
