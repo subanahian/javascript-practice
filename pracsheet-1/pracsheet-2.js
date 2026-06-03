@@ -1844,3 +1844,13 @@ function firstRepeating(str) {
 }
 
 console.log(firstRepeating("abccde"));
+//prob-248
+function firstUnique(str) {
+  for(let char of str) {
+    if(str.indexOf(char) === str.lastIndexOf(char)) {
+      return char;
+    }
+  }
+}
+
+console.log(firstUnique("aabbcddee"));
