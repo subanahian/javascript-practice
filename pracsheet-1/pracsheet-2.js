@@ -1877,3 +1877,13 @@ function twoSum(arr, target) {
 }
 
 console.log(twoSum([2,7,11,15], 9));
+
+//prob-251
+function rotateRight(arr) {
+  let last = arr.pop();
+  arr.unshift(last);
+
+  return arr;
+}
+
+console.log(rotateRight([1,2,3,4]));
