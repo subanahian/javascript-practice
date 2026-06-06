@@ -1887,3 +1887,13 @@ function rotateRight(arr) {
 }
 
 console.log(rotateRight([1,2,3,4]));
+
+//prob-252
+function moveZeroes(arr) {
+  let nonZero = arr.filter(num => num !== 0);
+  let zeroes = arr.filter(num => num === 0);
+
+  return [...nonZero, ...zeroes];
+}
+
+console.log(moveZeroes([0,1,0,3,12]));
