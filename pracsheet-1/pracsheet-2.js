@@ -1899,3 +1899,11 @@ function moveZeroes(arr) {
 console.log(moveZeroes([0,1,0,3,12]));
 
 //prob-253
+function rotateLeft(arr) {
+  let first = arr.shift();
+  arr.push(first);
+
+  return arr;
+}
+
+console.log(rotateLeft([1,2,3,4]));
