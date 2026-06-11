@@ -1914,3 +1914,11 @@ const result = numbers.map(num => num * 2);
 console.log(result);
 
 //prob-255
+function invertObject(obj) {
+  const inverted = {};
+  for (let key in obj) {
+    inverted[obj[key]] = key;
+  }
+  return inverted;
+}
+console.log(invertObject({ a: 1, b: 2, c: 3 }));
