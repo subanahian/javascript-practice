@@ -1922,3 +1922,20 @@ function invertObject(obj) {
   return inverted;
 }
 console.log(invertObject({ a: 1, b: 2, c: 3 }));
+
+//prob=256
+function threeSum(arr, target) {
+  for(let i = 0; i < arr.length; i++) {
+    for(let j = i + 1; j < arr.length; j++) {
+      for(let k = j + 1; k < arr.length; k++) {
+        if(arr[i] + arr[j] + arr[k] === target) {
+          return [arr[i], arr[j], arr[k]];
+        }
+      }
+    }
+  }
+}
+
+console.log(threeSum([1,2,3,4,5], 9));
+
+//prob-257
