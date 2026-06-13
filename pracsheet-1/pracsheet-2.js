@@ -1939,3 +1939,9 @@ function threeSum(arr, target) {
 console.log(threeSum([1,2,3,4,5], 9));
 
 //prob-257
+
+//prob-258
+
+//prob-259
+
+//prob-260
