@@ -1939,6 +1939,14 @@ function threeSum(arr, target) {
 console.log(threeSum([1,2,3,4,5], 9));
 
 //prob-257
+function rotateLeft(arr) {
+  let first = arr.shift();
+  arr.push(first);
+
+  return arr;
+}
+
+console.log(rotateLeft([1,2,3,4]));
 
 //prob-258
 
