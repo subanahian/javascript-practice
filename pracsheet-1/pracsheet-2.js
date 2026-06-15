@@ -1949,7 +1949,7 @@ function rotateLeft(arr) {
 console.log(rotateLeft([1,2,3,4]));
 
 //prob-258
-
+console.log(hello)
 //prob-259
 
 //prob-260
