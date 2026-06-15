@@ -1949,7 +1949,31 @@ function rotateLeft(arr) {
 console.log(rotateLeft([1,2,3,4]));
 
 //prob-258
-console.log(hello)
+
+function myPromiseAll(promises) {
+    return new Promise((resolve, reject) => {
+        let results = [];
+        let completed = 0;
+
+        if (promises.length === 0) {
+            resolve([]);
+        }
+
+        promises.forEach((promise, index) => {
+            Promise.resolve(promise)
+                .then(value => {
+                    results[index] = value;
+                    completed++;
+
+                    if (completed === promises.length) {
+                        resolve(results);
+                    }
+                })
+                .catch(reject);
+        });
+    });
+}
+
 //prob-259
 
 //prob-260
