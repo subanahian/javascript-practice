@@ -1975,5 +1975,15 @@ function myPromiseAll(promises) {
 }
 
 //prob-259
+const obj = {
+  name: "Raj",
+  age: 20,
+  address: {
+    city: "Dhaka",
+    zip: 1200
+  },
+  skills: ["JS", "React"],
+};
+
 
 //prob-260
