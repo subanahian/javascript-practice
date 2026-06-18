@@ -1987,3 +1987,20 @@ const obj = {
 
 
 //prob-260
+let count = 0;
+
+retry(() => {
+    return new Promise((resolve, reject) => {
+        count++;
+
+        if (count < 3) {
+            reject("Failed");
+        } else {
+            resolve("Success");
+        }
+    });
+}, 3)
+.then(console.log)
+.catch(console.error);
+
+//prob-261
