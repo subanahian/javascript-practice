@@ -2031,3 +2031,28 @@ class EventEmitter {
 }
 
 //prob-262
+class EventEmitter {
+    constructor() {
+        this.events = {};
+    }
+
+    on(event, callback) {
+        if (!this.events[event]) {
+            this.events[event] = [];
+        }
+
+        this.events[event].push(callback);
+    }
+
+    emit(event, ...args) {
+        if (!this.events[event]) return;
+
+        this.events[event].forEach(fn => fn(...args));
+    }
+
+    off(event, callback) {
+        if (!this.events[event]) return;
+
+        this.events[event] = this.events[event].filter(fn => fn !== callback);
+    }
+}
