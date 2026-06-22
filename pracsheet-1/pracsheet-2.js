@@ -2056,3 +2056,18 @@ class EventEmitter {
         this.events[event] = this.events[event].filter(fn => fn !== callback);
     }
 }
+
+//prob-263
+function flatten(arr) {
+    let result = [];
+
+    for (let item of arr) {
+        if (Array.isArray(item)) {
+            result.push(...flatten(item));
+        } else {
+            result.push(item);
+        }
+    }
+
+    return result;
+}
