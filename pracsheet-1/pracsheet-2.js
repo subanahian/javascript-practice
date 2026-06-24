@@ -2071,3 +2071,38 @@ function flatten(arr) {
 
     return result;
 }
+
+//prob-264
+function memoize(fn) {
+    const cache = {};
+
+    return function (...args) {
+        const key = JSON.stringify(args);
+
+        if (cache[key]) {
+            return cache[key];
+        }
+
+        cache[key] = fn(...args);
+
+        return cache[key];
+    };
+}
+//prob-265
+function firstUniqueChar(str) {
+    const count = {};
+
+    for (const char of str) {
+        count[char] = (count[char] || 0) + 1;
+    }
+
+    for (const char of str) {
+        if (count[char] === 1) {
+            return char;
+        }
+    }
+
+    return null;
+}
+
+console.log(firstUniqueChar("aabbcdeeff"));
