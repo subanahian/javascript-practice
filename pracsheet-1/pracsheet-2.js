@@ -2173,3 +2173,32 @@ function maxSubArray(nums){
 
     return max;
 }
+
+//prob-269
+function spiral(matrix){
+
+    const result=[];
+
+    while(matrix.length){
+
+        result.push(...matrix.shift());
+
+        for(let row of matrix){
+            if(row.length){
+                result.push(row.pop());
+            }
+        }
+
+        if(matrix.length){
+            result.push(...(matrix.pop().reverse()));
+        }
+
+        for(let i=matrix.length-1;i>=0;i--){
+            if(matrix[i].length){
+                result.push(matrix[i].shift());
+            }
+        }
+    }
+
+    return result;
+}
