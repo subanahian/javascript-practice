@@ -2202,3 +2202,32 @@ function spiral(matrix){
 
     return result;
 }
+//prob-270
+class MyPromise {
+  constructor(executor) {
+    this.callback = null;
+
+    const resolve = (value) => {
+      if (this.callback) {
+        this.callback(value);
+      }
+    };
+
+    executor(resolve);
+  }
+
+  then(callback) {
+    this.callback = callback;
+  }
+}
+
+// Example
+const promise = new MyPromise((resolve) => {
+  setTimeout(() => {
+    resolve("Data fetched successfully!");
+  }, 2000);
+});
+
+promise.then((data) => {
+  console.log(data);
+});
