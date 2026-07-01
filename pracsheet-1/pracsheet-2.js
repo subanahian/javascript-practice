@@ -2231,3 +2231,38 @@ const promise = new MyPromise((resolve) => {
 promise.then((data) => {
   console.log(data);
 });
+//prob-270
+class MyPromise {
+  constructor(executor) {
+    this.callbacks = [];
+    this.value = undefined;
+    this.isResolved = false;
+
+    const resolve = (value) => {
+      this.value = value;
+      this.isResolved = true;
+
+      this.callbacks.forEach((cb) => cb(value));
+    };
+
+    executor(resolve);
+  }
+
+  then(callback) {
+    if (this.isResolved) {
+      callback(this.value);
+    } else {
+      this.callbacks.push(callback);
+    }
+  }
+}
+
+// Example
+const promise = new MyPromise((resolve) => {
+  setTimeout(() => {
+    resolve("Hello JavaScript!");
+  }, 1000);
+});
+
+promise.then((data) => console.log("First:", data));
+promise.then((data) => console.log("Second:", data));
