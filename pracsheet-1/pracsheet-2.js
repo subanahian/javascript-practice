@@ -2310,3 +2310,7 @@ function maxSubArray(nums){
 
     return max;
 }
+//prob-273
+function reverseWords(str) {
+    return str.trim().split(/\s+/).reverse().join(" ");
+}
