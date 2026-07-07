@@ -2319,3 +2319,14 @@ function isPalindrome(str) {
     const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, "");
     return cleaned === cleaned.split("").reverse().join("");
 }
+//prob-274
+function missingLetter(arr) {
+    let code = arr[0].charCodeAt(0);
+
+    for (const ch of arr) {
+        if (ch.charCodeAt(0) !== code) {
+            return String.fromCharCode(code);
+        }
+        code++;
+    }
+}
