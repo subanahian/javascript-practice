@@ -2314,3 +2314,8 @@ function maxSubArray(nums){
 function reverseWords(str) {
     return str.trim().split(/\s+/).reverse().join(" ");
 }
+//prob-274
+function isPalindrome(str) {
+    const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+    return cleaned === cleaned.split("").reverse().join("");
+}
