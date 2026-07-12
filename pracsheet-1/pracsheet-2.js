@@ -2418,3 +2418,21 @@ function binarySearch(arr, target) {
 
     return -1;
 }
+
+//prob-280
+function permute(str) {
+    if (str.length <= 1) return [str];
+
+    const result = [];
+
+    for (let i = 0; i < str.length; i++) {
+        const current = str[i];
+        const remaining = str.slice(0, i) + str.slice(i + 1);
+
+        for (const p of permute(remaining)) {
+            result.push(current + p);
+        }
+    }
+
+    return result;
+}
