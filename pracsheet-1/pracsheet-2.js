@@ -2481,3 +2481,10 @@ const arr = [1, 2, 3];
 arr.myMap(x => x * 2);
 
 // [2,4,6]
+
+//prob-284
+const arr = [1, 2, 3];
+
+arr.myMap(x => x * 2);
+
+// [2,4,6]
