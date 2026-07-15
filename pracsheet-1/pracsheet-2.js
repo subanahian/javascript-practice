@@ -2474,3 +2474,10 @@ const greet = once((name) => `Hello, ${name}!`);
 
 console.log(greet("Alice")); // Hello, Alice!
 console.log(greet("Bob"));   // Hello, Alice!
+
+//prob-283
+const arr = [1, 2, 3];
+
+arr.myMap(x => x * 2);
+
+// [2,4,6]
