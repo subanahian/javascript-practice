@@ -2488,3 +2488,16 @@ const arr = [1, 2, 3];
 arr.myMap(x => x * 2);
 
 // [2,4,6]
+
+//prob-284
+Array.prototype.myMap = function(callback, thisArg) {
+    const result = [];
+
+    for (let i = 0; i < this.length; i++) {
+        if (i in this) {
+            result[i] = callback.call(thisArg, this[i], i, this);
+        }
+    }
+
+    return result;
+};
