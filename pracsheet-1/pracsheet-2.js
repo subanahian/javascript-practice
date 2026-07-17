@@ -2501,3 +2501,23 @@ Array.prototype.myMap = function(callback, thisArg) {
 
     return result;
 };
+//prob-285
+Array.prototype.myFilter = function(callback, thisArg) {
+
+    const result = [];
+
+    for (let i = 0; i < this.length; i++) {
+
+        if (i in this) {
+
+            if (callback.call(thisArg, this[i], i, this)) {
+                result.push(this[i]);
+            }
+
+        }
+
+    }
+
+    return result;
+
+};
