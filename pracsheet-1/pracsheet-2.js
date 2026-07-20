@@ -2541,3 +2541,26 @@ Array.prototype.myReduce = function(callback, initialValue) {
 };
 
 prob-287
+const user = {
+  id: 1,
+  name: "Suba",
+  address: {
+    city: "Rangpur",
+    country: "Bangladesh",
+    location: {
+      lat: 25.75,
+      lng: 89.25,
+    },
+  },
+  skills: {
+    frontend: {
+      html: true,
+      css: true,
+      react: true,
+    },
+    backend: {
+      node: true,
+      express: true,
+    },
+  },
+};
