@@ -2582,3 +2582,9 @@ Function.prototype.myCall = function(context, ...args){
 }
 
 //prob-289
+function reverseString(str) 
+{
+  return str.split("").reverse().join("");
+}
+
+console.log(reverseString("GeeksForGeeks"));
