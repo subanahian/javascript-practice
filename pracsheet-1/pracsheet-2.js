@@ -2588,3 +2588,14 @@ function reverseString(str)
 }
 
 console.log(reverseString("GeeksForGeeks"));
+
+//prob-290
+function get(obj,path){
+
+    return path.split(".").reduce((acc,key)=>{
+
+        return acc?.[key];
+
+    },obj);
+
+}
