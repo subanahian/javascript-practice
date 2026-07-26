@@ -2606,3 +2606,10 @@ myPromiseAll([
     Promise.resolve(2),
     Promise.resolve(3)
 ])
+
+//prob-292
+function countVowels(str) {
+    const vowels = str.match(/[aeiou]/gi);
+    return vowels ? vowels.length : 0;
+}
+console.log(countVowels("JavaScript"));
