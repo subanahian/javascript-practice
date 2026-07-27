@@ -2613,3 +2613,15 @@ function countVowels(str) {
     return vowels ? vowels.length : 0;
 }
 console.log(countVowels("JavaScript"));
+
+//prob-293
+function curry(total = 0) {
+    return function (num) {
+        if (num === undefined) {
+            return total;
+        }
+        return curry(total + num);
+    };
+}
+
+console.log(curry()(1)(2)(3)()); // 6
