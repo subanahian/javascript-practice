@@ -2625,3 +2625,14 @@ function curry(total = 0) {
 }
 
 console.log(curry()(1)(2)(3)()); // 6
+
+//prob-294
+function pipe(...fns){
+
+    return function(x){
+
+        return fns.reduce((acc,fn)=>fn(acc),x);
+
+    }
+
+}
