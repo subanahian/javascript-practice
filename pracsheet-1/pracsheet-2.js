@@ -2636,3 +2636,27 @@ function pipe(...fns){
     }
 
 }
+//prob-295
+async function promisePool(tasks, limit) {
+
+    let index = 0;
+
+    async function worker() {
+
+        while (index < tasks.length) {
+
+            const current = index++;
+
+            await tasks[current]();
+
+        }
+
+    }
+
+    await Promise.all(
+        Array(limit)
+            .fill()
+            .map(worker)
+    );
+
+}
