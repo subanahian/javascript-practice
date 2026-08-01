@@ -2684,3 +2684,13 @@ async function promisePool(tasks, limit) {
     );
 
 }
+//prob-297
+function sleep(ms){
+
+    return new Promise(resolve=>{
+
+        setTimeout(resolve,ms);
+
+    });
+
+}
