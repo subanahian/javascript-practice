@@ -2694,3 +2694,14 @@ function sleep(ms){
     });
 
 }
+
+//prob-298
+function sleep(ms){
+
+    return new Promise(resolve=>{
+
+        setTimeout(resolve,ms);
+
+    });
+
+}
