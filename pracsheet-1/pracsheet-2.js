@@ -2755,3 +2755,13 @@ Function.prototype.myApply = function(context,args=[]){
     return result;
 
 }
+//prob-302
+Function.prototype.myBind = function(context, ...args) {
+
+    const fn = this;
+
+    return function(...newArgs) {
+        return fn.apply(context, [...args, ...newArgs]);
+    };
+
+};
