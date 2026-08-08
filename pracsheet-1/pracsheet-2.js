@@ -2785,3 +2785,23 @@ Array.prototype.myFilter = function(callback, thisArg) {
     return result;
 
 };
+
+//prob-305
+function once(fn) {
+    let called = false;
+    let result;
+
+    return function (...args) {
+        if (!called) {
+            called = true;
+            result = fn.apply(this, args);
+        }
+        return result;
+    };
+}
+
+// Example
+const greet = once((name) => `Hello, ${name}!`);
+
+console.log(greet("Alice")); // Hello, Alice!
+console.log(greet("Bob"));   // Hello, Alice!
