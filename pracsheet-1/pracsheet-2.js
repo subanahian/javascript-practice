@@ -2841,3 +2841,9 @@ function myPromiseAllSettled(promises) {
     });
   });
 }
+
+//prob-307
+myPromiseRace([
+  new Promise(resolve => setTimeout(() => resolve("A"), 300)),
+  new Promise(resolve => setTimeout(() => resolve("B"), 100))
+]);
