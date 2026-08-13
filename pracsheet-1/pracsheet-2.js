@@ -2847,3 +2847,32 @@ myPromiseRace([
   new Promise(resolve => setTimeout(() => resolve("A"), 300)),
   new Promise(resolve => setTimeout(() => resolve("B"), 100))
 ]);
+
+//prob-308
+function myPromiseAny(promises) {
+  return new Promise((resolve, reject) => {
+    const errors = [];
+    let rejected = 0;
+
+    if (promises.length === 0) {
+      reject(new AggregateError([], "All promises rejected"));
+      return;
+    }
+
+    promises.forEach((promise, index) => {
+      Promise.resolve(promise)
+        .then(resolve)
+        .catch(error => {
+          errors[index] = error;
+          rejected++;
+
+          if (rejected === promises.length) {
+            reject(new AggregateError(
+              errors,
+              "All promises rejected"
+            ));
+          }
+        });
+    });
+  });
+}
