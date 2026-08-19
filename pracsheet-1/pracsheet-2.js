@@ -2887,3 +2887,23 @@ function myPromiseRace(promises) {
     }
   });
 }
+
+//prob-309
+function twoSum(arr, target) {
+  const map = new Map();
+
+  for (let i = 0; i < arr.length; i++) {
+    const needed = target - arr[i];
+
+    if (map.has(needed)) {
+      return [map.get(needed), i];
+    }
+
+    map.set(arr[i], i);
+  }
+
+  return [];
+}
+
+console.log(twoSum([2, 7, 11, 15], 9));
+// [0, 1]
