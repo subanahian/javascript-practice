@@ -2907,3 +2907,28 @@ function twoSum(arr, target) {
 
 console.log(twoSum([2, 7, 11, 15], 9));
 // [0, 1]
+
+//prob-310
+console.log("A");
+
+setTimeout(() => {
+  console.log("B");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("C");
+
+  setTimeout(() => {
+    console.log("D");
+  }, 0);
+});
+
+(async function () {
+  console.log("E");
+
+  await Promise.resolve();
+
+  console.log("F");
+})();
+
+console.log("G");
