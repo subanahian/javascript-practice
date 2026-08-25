@@ -3007,3 +3007,27 @@ class Trie {
     return node;
   }
 }
+
+//prob=313
+function deepFreeze(obj) {
+  if (
+    obj === null ||
+    typeof obj !== "object"
+  ) {
+    return obj;
+  }
+
+  Object.freeze(obj);
+
+  for (const key of Object.keys(obj)) {
+    if (
+      obj[key] !== null &&
+      typeof obj[key] === "object" &&
+      !Object.isFrozen(obj[key])
+    ) {
+      deepFreeze(obj[key]);
+    }
+  }
+
+  return obj;
+}
