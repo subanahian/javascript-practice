@@ -3031,3 +3031,30 @@ function deepFreeze(obj) {
 
   return obj;
 }
+
+//prob-314
+function throttle(fn, delay) {
+  let lastTime = 0;
+  let timer = null;
+
+  return function (...args) {
+    const now = Date.now();
+    const remaining = delay - (now - lastTime);
+
+    if (remaining <= 0) {
+      if (timer) {
+        clearTimeout(timer);
+        timer = null;
+      }
+
+      lastTime = now;
+      fn.apply(this, args);
+    } else if (!timer) {
+      timer = setTimeout(() => {
+        lastTime = Date.now();
+        timer = null;
+        fn.apply(this, args);
+      }, remaining);
+    }
+  };
+}
