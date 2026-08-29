@@ -3088,3 +3088,18 @@ async function runQueue(tasks, limit) {
 
   return results;
 }
+//prob-316
+function customTimeout(callback, delay) {
+  const start = Date.now();
+
+  const interval = setInterval(() => {
+    if (Date.now() - start >= delay) {
+      clearInterval(interval);
+      callback();
+    }
+  }, 10);
+}
+
+customTimeout(() => {
+  console.log("Executed");
+}, 1000);
