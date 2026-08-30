@@ -3100,6 +3100,20 @@ function customTimeout(callback, delay) {
   }, 10);
 }
 
+prob-317
+function topKFrequent(nums, k) {
+  const frequency = new Map();
+
+  for (const num of nums) {
+    frequency.set(num, (frequency.get(num) || 0) + 1);
+  }
+
+  return [...frequency.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, k)
+    .map(item => item[0]);
+}
+
 customTimeout(() => {
   console.log("Executed");
 }, 1000);
