@@ -3146,3 +3146,18 @@ function groupBy(array, key) {
     return result;
   }, {});
 }
+
+//prob-320
+function findDuplicateUsers(users) {
+  const count = new Map();
+
+  for (const user of users) {
+    count.set(user.id, (count.get(user.id) || 0) + 1);
+  }
+
+  return users.filter(
+    (user, index, arr) =>
+      count.get(user.id) > 1 &&
+      arr.findIndex(u => u.id === user.id) === index
+  );
+}
