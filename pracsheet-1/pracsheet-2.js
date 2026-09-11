@@ -3302,3 +3302,9 @@ const b = counter();
 console.log(a());
 console.log(a());
 console.log(b());
+//prob-327
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
+}
