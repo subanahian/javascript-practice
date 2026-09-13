@@ -3343,3 +3343,51 @@ function longestPalindrome(s) {
 
   return s.slice(start, end + 1);
 }
+
+//prob-328
+function minWindow(s, t) {
+  if (t.length > s.length) return "";
+
+  const count = {};
+
+  for (const char of t) {
+    count[char] = (count[char] || 0) + 1;
+  }
+
+  let left = 0;
+  let required = t.length;
+
+  let minStart = 0;
+  let minLength = Infinity;
+
+  for (let right = 0; right < s.length; right++) {
+    const char = s[right];
+
+    if (count[char] > 0) {
+      required--;
+    }
+
+    count[char] = (count[char] || 0) - 1;
+
+    while (required === 0) {
+      if (right - left + 1 < minLength) {
+        minLength = right - left + 1;
+        minStart = left;
+      }
+
+      const leftChar = s[left];
+
+      count[leftChar]++;
+
+      if (count[leftChar] > 0) {
+        required++;
+      }
+
+      left++;
+    }
+  }
+
+  return minLength === Infinity
+    ? ""
+    : s.slice(minStart, minStart + minLength);
+}
