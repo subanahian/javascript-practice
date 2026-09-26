@@ -3541,4 +3541,57 @@ function majorityElement(nums) {
 }
 
 //prob-335
-s
+function solveNQueens(n) {
+  const result = [];
+
+  const board = Array.from(
+    { length: n },
+    () => Array(n).fill(".")
+  );
+
+  const columns = new Set();
+  const diagonal1 = new Set();
+  const diagonal2 = new Set();
+
+  function backtrack(row) {
+    if (row === n) {
+      result.push(
+        board.map(row => row.join(""))
+      );
+      return;
+    }
+
+    for (let col = 0; col < n; col++) {
+      const d1 = row - col;
+      const d2 = row + col;
+
+      if (
+        columns.has(col) ||
+        diagonal1.has(d1) ||
+        diagonal2.has(d2)
+      ) {
+        continue;
+      }
+
+      board[row][col] = "Q";
+
+      columns.add(col);
+      diagonal1.add(d1);
+      diagonal2.add(d2);
+
+      backtrack(row + 1);
+
+      board[row][col] = ".";
+
+      columns.delete(col);
+      diagonal1.delete(d1);
+      diagonal2.delete(d2);
+    }
+  }
+
+  backtrack(0);
+
+  return result;
+}
+
+console.log(solveNQueens(4));
