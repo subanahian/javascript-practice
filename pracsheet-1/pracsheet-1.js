@@ -141,3 +141,33 @@ if (totalAmount >= 550 && paymentMethod === "bKash") {
 } else {
   console.log("No offer available");
 }
+
+//pro32
+function mergeArrays(a, b) {
+  let i = 0;
+  let j = 0;
+
+  const result = [];
+
+  while (i < a.length && j < b.length) {
+    if (a[i] < b[j]) {
+      result.push(a[i]);
+      i++;
+    } else {
+      result.push(b[j]);
+      j++;
+    }
+  }
+
+  while (i < a.length) {
+    result.push(a[i]);
+    i++;
+  }
+
+  while (j < b.length) {
+    result.push(b[j]);
+    j++;
+  }
+
+  return result;
+}
