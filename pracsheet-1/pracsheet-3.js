@@ -16,3 +16,31 @@ function findPeakElement(nums) {
 
   return left;
 }
+
+prob - 2;
+function cloneGraph(node) {
+  if (!node) return null;
+
+  const visited = new Map();
+
+  function clone(current) {
+    if (visited.has(current)) {
+      return visited.get(current);
+    }
+
+    const copy = {
+      val: current.val,
+      neighbors: [],
+    };
+
+    visited.set(current, copy);
+
+    for (const neighbor of current.neighbors) {
+      copy.neighbors.push(clone(neighbor));
+    }
+
+    return copy;
+  }
+
+  return clone(node);
+}
