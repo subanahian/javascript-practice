@@ -44,3 +44,56 @@ function cloneGraph(node) {
 
   return clone(node);
 }
+
+//prob-3
+function maxSlidingWindow(nums, k) {
+  let result = [];
+  let deque = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    while (deque.length && deque[0] <= i - k) {
+      deque.shift();
+    }
+
+    while (deque.length && nums[deque[deque.length - 1]] <= nums[i]) {
+      deque.pop();
+    }
+
+    deque.push(i);
+
+    if (i >= k - 1) {
+      result.push(nums[deque[0]]);
+    }
+  }
+
+  return result;
+}
+
+console.log(maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3));
+// [3,3,5,5,6,7]
+
+//prob-4
+function trap(height) {
+  let left = 0;
+  let right = height.length - 1;
+  let leftMax = 0;
+  let rightMax = 0;
+  let water = 0;
+
+  while (left < right) {
+    if (height[left] < height[right]) {
+      leftMax = Math.max(leftMax, height[left]);
+      water += leftMax - height[left];
+      left++;
+    } else {
+      rightMax = Math.max(rightMax, height[right]);
+      water += rightMax - height[right];
+      right--;
+    }
+  }
+
+  return water;
+}
+
+console.log(trap([0,1,0,2,1,0,1,3,2,1,2,1]));
+// 6
