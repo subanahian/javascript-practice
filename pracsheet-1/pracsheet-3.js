@@ -139,3 +139,30 @@ function coinChange(coins, amount) {
 
 console.log(coinChange([1, 2, 5], 11)); // 3
 console.log(coinChange([2], 3)); // -1
+
+//prob-8
+function wordBreak(s, wordDict) {
+  let words = new Set(wordDict);
+  let dp = Array(s.length + 1).fill(false);
+
+  dp[0] = true;
+
+  for (let i = 1; i <= s.length; i++) {
+    for (let j = 0; j < i; j++) {
+      if (dp[j] && words.has(s.slice(j, i))) {
+        dp[i] = true;
+        break;
+      }
+    }
+  }
+
+  return dp[s.length];
+}
+
+console.log(
+  wordBreak("leetcode", ["leet", "code"])
+); // true
+
+console.log(
+  wordBreak("catsandog", ["cats", "dog", "sand", "and", "cat"])
+); // false
