@@ -166,3 +166,40 @@ console.log(
 console.log(
   wordBreak("catsandog", ["cats", "dog", "sand", "and", "cat"])
 ); // false
+
+//prob-8
+function canFinish(numCourses, prerequisites) {
+  let graph = Array.from(
+    { length: numCourses },
+    () => []
+  );
+
+  for (let [course, prerequisite] of prerequisites) {
+    graph[prerequisite].push(course);
+  }
+
+  let state = Array(numCourses).fill(0);
+
+  function dfs(course) {
+    if (state[course] === 1) return false;
+    if (state[course] === 2) return true;
+
+    state[course] = 1;
+
+    for (let next of graph[course]) {
+      if (!dfs(next)) return false;
+    }
+
+    state[course] = 2;
+    return true;
+  }
+
+  for (let i = 0; i < numCourses; i++) {
+    if (!dfs(i)) return false;
+  }
+
+  return true;
+}
+
+console.log(canFinish(2, [[1, 0]]));       // true
+console.log(canFinish(2, [[1, 0], [0, 1]])); // false
