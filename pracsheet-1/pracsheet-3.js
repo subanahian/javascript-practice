@@ -203,3 +203,27 @@ function canFinish(numCourses, prerequisites) {
 
 console.log(canFinish(2, [[1, 0]]));       // true
 console.log(canFinish(2, [[1, 0], [0, 1]])); // false
+
+//prob-9
+function subsets(nums) {
+  let result = [];
+
+  function backtrack(index, current) {
+    if (index === nums.length) {
+      result.push([...current]);
+      return;
+    }
+
+    backtrack(index + 1, current);
+
+    current.push(nums[index]);
+    backtrack(index + 1, current);
+    current.pop();
+  }
+
+  backtrack(0, []);
+  return result;
+}
+
+console.log(subsets([1, 2]));
+// [[], [2], [1], [1, 2]]
