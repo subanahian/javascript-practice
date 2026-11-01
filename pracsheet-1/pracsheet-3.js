@@ -250,3 +250,46 @@ function minDistance(word1, word2) {
 }
 
 console.log(minDistance("horse", "ros")); // 3
+
+//prob-10
+function permutations(nums) {
+  const result = [];
+
+  function backtrack(path, used) {
+    if (path.length === nums.length) {
+      result.push([...path]);
+      return;
+    }
+
+    for (let i = 0; i < nums.length; i++) {
+      if (used[i]) continue;
+
+      used[i] = true;
+      path.push(nums[i]);
+
+      backtrack(path, used);
+
+      path.pop();
+      used[i] = false;
+    }
+  }
+
+  backtrack([], []);
+
+  return result;
+}
+
+//prob-11
+function hasCycle(head) {
+  let slow = head;
+  let fast = head;
+
+  while (fast && fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+
+    if (slow === fast) return true;
+  }
+
+  return false;
+}
