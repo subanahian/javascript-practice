@@ -402,3 +402,28 @@ function lengthOfLIS(nums) {
 
 console.log(lengthOfLIS([10, 9, 2, 5, 3, 7, 101, 18]));
 // 4
+
+//prob-15
+function findMissingRanges(nums, lower, upper) {
+  let result = [];
+  let prev = lower - 1;
+
+  for (let i = 0; i <= nums.length; i++) {
+    let current = i === nums.length ? upper + 1 : nums[i];
+
+    if (current - prev >= 2) {
+      let start = prev + 1;
+      let end = current - 1;
+
+      result.push(
+        start === end ? `${start}` : `${start}->${end}`
+      );
+    }
+
+    prev = current;
+  }
+
+  return result;
+}
+
+console.log(findMissingRanges([0, 1, 3, 50, 75], 0, 99));
