@@ -427,3 +427,28 @@ function findMissingRanges(nums, lower, upper) {
 }
 
 console.log(findMissingRanges([0, 1, 3, 50, 75], 0, 99));
+
+//prob-16
+function maxProduct(nums) {
+  let max = nums[0];
+  let min = nums[0];
+  let result = nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+    let num = nums[i];
+
+    if (num < 0) {
+      [max, min] = [min, max];
+    }
+
+    max = Math.max(num, max * num);
+    min = Math.min(num, min * num);
+
+    result = Math.max(result, max);
+  }
+
+  return result;
+}
+
+console.log(maxProduct([2, 3, -2, 4])); // 6
+console.log(maxProduct([-2, 0, -1]));   // 0
