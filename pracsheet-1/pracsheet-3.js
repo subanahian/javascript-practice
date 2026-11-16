@@ -554,4 +554,31 @@ function numDecodings(s) {
 }
 
 console.log(numDecodings("226")); // 3
-console.log(numDecodings("06"));  // 0
+console.log(numDecodings("06")); // 0
+
+//prob-23
+function numDecodings(s) {
+  if (!s || s[0] === "0") return 0;
+
+  let dp = Array(s.length + 1).fill(0);
+  dp[0] = 1;
+  dp[1] = 1;
+
+  for (let i = 2; i <= s.length; i++) {
+    let one = Number(s.slice(i - 1, i));
+    let two = Number(s.slice(i - 2, i));
+
+    if (one >= 1 && one <= 9) {
+      dp[i] += dp[i - 1];
+    }
+
+    if (two >= 10 && two <= 26) {
+      dp[i] += dp[i - 2];
+    }
+  }
+
+  return dp[s.length];
+}
+
+console.log(numDecodings("226")); // 3
+console.log(numDecodings("06")); // 0
