@@ -642,3 +642,6 @@ function partition(s) {
 
 console.log(partition("aab"));
 // [["a","a","b"], ["aa","b"]]
+
+//prob-23
+
