@@ -707,3 +707,35 @@ function partition(s) {
 
 console.log(partition("aab"));
 // [["a","a","b"], ["aa","b"]]
+
+//prob-26
+function partition(s) {
+  let result = [];
+
+  function isPalindrome(str) {
+    return str === str.split("").reverse().join("");
+  }
+
+  function backtrack(start, current) {
+    if (start === s.length) {
+      result.push([...current]);
+      return;
+    }
+
+    for (let end = start + 1; end <= s.length; end++) {
+      let part = s.slice(start, end);
+
+      if (isPalindrome(part)) {
+        current.push(part);
+        backtrack(end, current);
+        current.pop();
+      }
+    }
+  }
+
+  backtrack(0, []);
+  return result;
+}
+
+console.log(partition("aab"));
+// [["a","a","b"], ["aa","b"]]
