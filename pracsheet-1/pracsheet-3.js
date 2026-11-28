@@ -739,3 +739,37 @@ function partition(s) {
 
 console.log(partition("aab"));
 // [["a","a","b"], ["aa","b"]]
+
+//prob-27
+function findMedianSortedArrays(a, b) {
+  let merged = [];
+  let i = 0;
+  let j = 0;
+
+  while (i < a.length && j < b.length) {
+    if (a[i] < b[j]) {
+      merged.push(a[i++]);
+    } else {
+      merged.push(b[j++]);
+    }
+  }
+
+  while (i < a.length) merged.push(a[i++]);
+  while (j < b.length) merged.push(b[j++]);
+
+  let mid = Math.floor(merged.length / 2);
+
+  if (merged.length % 2 === 1) {
+    return merged[mid];
+  }
+
+  return (merged[mid - 1] + merged[mid]) / 2;
+}
+
+console.log(findMedianSortedArrays([1, 3], [2])); 
+// 2
+
+console.log(findMedianSortedArrays([1, 2], [3, 4]));
+// 2.5
+
+//prob-28
